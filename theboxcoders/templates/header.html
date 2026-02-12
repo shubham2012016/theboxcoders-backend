@@ -1,0 +1,32 @@
+{% load static %}
+<div class="header">
+  <div class="desktop-header">
+    <div class="company-name">
+      <img src="{% static 'assets/logo.svg' %}" />
+      TheBoxCoders
+    </div>
+    <div class="desktop-menu">
+      <a href="{% url 'index' %}" class="menu-item">Home</a>
+      <a href="{% url 'about' %}" class="menu-item">About</a>
+      <a href="{% url 'contact' %}" class="menu-item">Contact</a>
+    </div>
+    <div class="contact-number">
+        {% for contact in contacts %}
+          <a href="tel:{{contact.phone_number}}">
+            {{contact.phone_number}}
+          </a>
+        {% endfor %}
+    </div>
+  </div>
+
+  <div class="mobile-header">
+    <div class="the-box-coders-name-and-logo">
+      <img src="{% static 'assets/logo.svg' %}" />
+      <span>The Box Coders</span>
+    </div>
+  </div>
+</div>
+
+
+
+{% include "contact-btn.html" %}

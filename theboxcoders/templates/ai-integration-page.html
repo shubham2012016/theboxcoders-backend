@@ -1,0 +1,640 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>
+      AI & Machine Learning Integration Services in Delhi, India | The Box
+      Coders
+    </title>
+    <meta
+      name="description"
+      content="We integrate AI and Machine Learning into your business workflows to automate decisions, analyze data, improve accuracy, and increase scalability. Our AI services include predictive analytics, LLM integration, recommender systems, OCR automation, chatbot development, and custom ML model deployment for businesses in Delhi and across India."
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="AI & Machine Learning Integration Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      property="og:description"
+      content="We integrate AI and Machine Learning into your business workflows to automate decisions, analyze data, improve accuracy, and increase scalability. Our AI services include predictive analytics, LLM integration, recommender systems, OCR automation, chatbot development, and custom ML model deployment for businesses in Delhi and across India."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI & Machine Learning Integration Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      name="twitter:description"
+      content="We integrate AI and Machine Learning into your business workflows to automate decisions, analyze data, improve accuracy, and increase scalability. Our AI services include predictive analytics, LLM integration, recommender systems, OCR automation, chatbot development, and custom ML model deployment for businesses in Delhi and across India."
+    />
+    <meta name="twitter:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- SEO Keywords -->
+    <meta
+      name="keywords"
+      content="ai integration services delhi, llm integrations delhi, chatbot development india, ai automation company delhi, custom ai solutions india, machine learning integration delhi, openai api integration, ai developers delhi"
+    />
+
+    <!-- Geo Location for Local SEO -->
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="Delhi" />
+    <meta name="geo.position" content="28.6139;77.2090" />
+    <meta name="ICBM" content="28.6139, 77.2090" />
+
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon-icons/logo-16.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon-icons/logo-32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="{% static 'favicon-icons/logo-48.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="{% static 'favicon-icons/logo-64.png' %}"
+    />
+
+    <!-- High-Resolution for Chrome / Android -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{% static 'favicon-icons/logo-192.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="{% static 'favicon-icons/logo-256.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="{% static 'favicon-icons/logo-512.png' %}"
+    />
+
+    <!-- Apple Touch Icons (iOS / iPadOS) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{% static 'favicon-icons/logo-120.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="{% static 'favicon-icons/logo-152.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="{% static 'favicon-icons/logo-167.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicon-icons/logo-180.png' %}"
+    />
+
+    <!-- Fallback ICO (for legacy Windows & old browsers) -->
+    <link
+      rel="icon"
+      href="{% static 'favicon-icons/theboxcoderslogo.ico' %}"
+      sizes="any"
+    />
+
+    <!-- Safari Pinned Tab -->
+    <link
+      rel="mask-icon"
+      href="{% static 'favicon-icons/logo.svg' %}"
+      color="#000000"
+    />
+
+    <!-- Windows Tile -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="{% static 'favicon-icons/logo-144.png' %}"
+    />
+
+    <!-- Manifest (For PWA, Android Home Screen) -->
+    <link rel="manifest" href="{% static 'favicon-icons/site.webmanifest' %}" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="{% static 'css/ai-integration-page.css' %}" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    {% include "header.html" %} {% include "mobile-menu.html" %}
+
+    <div class="wrap">
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <h1 data-aos="fade-up">
+            AI Integration Services<br />For Modern Businesses
+          </h1>
+          <p data-aos="fade-down">
+            We integrate Artificial Intelligence into your existing tools,
+            websites, apps, and workflows — giving your business automation,
+            insight, and efficiency that was never possible before.
+          </p>
+          <button class="btn" id="ai-integration-btn" data-aos="zoom-in">
+            Request AI Integration →
+          </button>
+        </div>
+        <div class="hero-img" data-aos="zoom-in"></div>
+      </section>
+
+      <!-- WHAT WE INTEGRATE -->
+      <section class="section">
+        <h2>AI Integrations We Provide</h2>
+        <p>
+          We bring the power of AI into your business operations with seamless,
+          production-ready integrations.
+        </p>
+
+        <div class="services-grid">
+          <div class="card" data-aos="fade-up">
+            <h3>Chatbot Integration</h3>
+            <p>
+              Custom AI chatbots for websites, CRMs, support systems, data
+              retrieval, and internal dashboards.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>AI-Powered Automation</h3>
+            <p>
+              Let AI handle tasks like email replies, summarization, scheduling,
+              categorization & workflow triggers.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>LLM Integrations</h3>
+            <p>
+              Integrate OpenAI, Gemini, Llama, or custom models into your apps
+              with secure APIs.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>AI Search Systems</h3>
+            <p>
+              Smart search with embeddings, semantic search, and knowledge-base
+              indexing.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Document AI Tools</h3>
+            <p>
+              Extract data, summarize PDFs, process invoices, analyze reports
+              using AI document engines.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>AI-Based Predictions</h3>
+            <p>
+              Sales forecasting, trend prediction, anomaly detection, customer
+              scoring, ML pipelines.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="section">
+        <h2>Why Choose Our AI Integration?</h2>
+        <div class="two-col">
+          <div class="card" data-aos="fade-up">
+            <h3>Real Business Impact</h3>
+            <p>
+              Every AI solution is built to solve a measurable business problem.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Clean, Stable Systems</h3>
+            <p>We build secure pipelines with predictable performance.</p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Fast Integration</h3>
+            <p>Most AI features can be integrated within days, not months.</p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Custom Model Support</h3>
+            <p>We support fine-tuned, local, or cloud-hosted AI models.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
+      <section class="section">
+        <h2>Where AI Can Upgrade Your Business</h2>
+        <div class="services-grid">
+          <div class="card" data-aos="fade-up">
+            <h3>Customer Support</h3>
+            <p>
+              AI assistants for instant answers, ticket replies, and CRM
+              actions.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Sales & CRM</h3>
+            <p>
+              Lead qualification, proposal writing, reminder automation,
+              analytics.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Operations</h3>
+            <p>
+              Process automation, workflow intelligence, smarter decision tools.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Marketing</h3>
+            <p>
+              Content generation, ad insights, SEO improvements, campaign
+              boosters.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Finance</h3>
+            <p>
+              Invoice reading, expense classification, fraud detection,
+              reporting.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>HR & Admin</h3>
+            <p>Resume parsing, candidate ranking, internal assistant tools.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING SECTION -->
+      <section class="section pricing-section">
+        <h2>AI Integration Pricing</h2>
+        <p>
+          Select a package and we’ll pre-fill the inquiry form based on your
+          choice.
+        </p>
+
+        <div class="pricing-grid">
+          <!-- Starter -->
+          <div class="price-card" data-aos="fade-up">
+            <h3>Starter AI Integration</h3>
+            <p class="price">₹9,999</p>
+            <ul>
+              <li>Basic AI Chatbot</li>
+              <li>Simple Automation (Email, Text)</li>
+              <li>LLM API Setup</li>
+              <li>3-Day Delivery</li>
+            </ul>
+            <button
+              class="choose-plan"
+              data-plan="Starter AI Integration"
+              data-price="₹9,999"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Professional -->
+          <div class="price-card" data-aos="fade-up">
+            <h3>Professional Integration</h3>
+            <p class="price">₹24,999</p>
+            <ul>
+              <li>Advanced AI Automations</li>
+              <li>Semantic Search / RAG Setup</li>
+              <li>Document AI Processing</li>
+              <li>Priority Delivery + Support</li>
+            </ul>
+            <button
+              class="choose-plan"
+              data-plan="Professional Integration"
+              data-price="₹24,999"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="price-card" data-aos="fade-up">
+            <h3>Enterprise AI Solutions</h3>
+            <p class="price">Custom Quote</p>
+            <ul>
+              <li>Full AI Automation Suite</li>
+              <li>Custom-trained Models</li>
+              <li>Multi-Platform Integration</li>
+              <li>Dedicated Support + NDA</li>
+            </ul>
+            <button
+              class="choose-plan"
+              data-plan="Enterprise AI Solutions"
+              data-price="Custom Quote"
+            >
+              Choose Plan
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- INQUIRY FORM -->
+      <section class="section">
+        <h2>Start Your AI Integration</h2>
+        <div class="form-box">
+          <form
+            class="form-grid"
+            method="POST"
+            action="{% url 'ai_intergration_services' %}"
+          >
+            {% csrf_token %}
+
+            <input
+              type="hidden"
+              name="service_page"
+              value="AI & Machine Learning Integration Services Delhi"
+            />
+            <input type="hidden" name="source_city" value="Delhi" />
+
+            <div>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="phone_number"
+                placeholder="Phone Number"
+              />
+            </div>
+
+            <div>
+              <select name="service_type" required>
+                <option disabled selected hidden>Choose AI Service Type</option>
+                <option value="chatbot">Chatbot Integration</option>
+                <option value="llm">LLM Integration</option>
+                <option value="automation">AI Automation</option>
+                <option value="search">Semantic Search / RAG</option>
+                <option value="document">Document AI</option>
+                <option value="custom">Custom / Advanced AI</option>
+              </select>
+            </div>
+
+            <div style="grid-column: 1 / span 2">
+              <textarea
+                id="ai-project-requirements"
+                name="project_requirements"
+                placeholder="Describe how you want AI to improve your business..."
+                required
+              ></textarea>
+            </div>
+
+            <div style="grid-column: 1 / span 2; text-align: right">
+              <button class="btn">Submit Inquiry</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    {% include "footer.html" %}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://www.theboxcoders.com/#localbusiness",
+            "name": "The Box Coders",
+            "url": "https://www.theboxcoders.com/",
+            "logo": "https://www.theboxcoders.com/static/assets/logo.svg",
+            "image": "https://www.theboxcoders.com/static/assets/og-card.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Delhi",
+              "addressRegion": "DL",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.6139,
+              "longitude": 77.209
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Delhi",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Sales",
+              "availableLanguage": ["English"],
+              "areaServed": "IN"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/Theboxcoders",
+              "https://www.twitter.com/Theboxcoders"
+            ]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.theboxcoders.com/ai-integration-services#service",
+            "name": "AI & Machine Learning Integration Services in Delhi",
+            "description": "Professional AI and Machine Learning integration services for businesses in Delhi and across India. Services include AI chatbots, LLM integrations, AI automation, semantic search (RAG), document AI, predictive analytics, and custom machine learning model deployment.",
+            "provider": {
+              "@id": "https://www.theboxcoders.com/#localbusiness"
+            },
+            "serviceType": [
+              "AI Integration Services",
+              "Machine Learning Integration",
+              "Chatbot Development",
+              "LLM Integration",
+              "AI Automation",
+              "Semantic Search (RAG)",
+              "Document AI",
+              "Predictive Analytics"
+            ],
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Delhi",
+                "addressCountry": "IN"
+              },
+              {
+                "@type": "Country",
+                "name": "India"
+              }
+            ],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceLocation": {
+                "@type": "Place",
+                "name": "Delhi, India"
+              },
+              "availableLanguage": ["English"]
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "AI Integration Pricing Plans",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Starter AI Integration",
+                  "price": "9999",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Basic AI Chatbot & Automation Setup"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Professional AI Integration",
+                  "price": "24999",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Advanced AI Automation, RAG & Document AI"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Enterprise AI Solutions",
+                  "price": "0",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/PreOrder",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "0",
+                    "priceCurrency": "INR",
+                    "description": "Custom AI solutions including full automation, custom-trained models, and multi-platform integration"
+                  },
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Enterprise AI & ML Solutions"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script>
+      // Initialize AOS when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 1200, // Duration of animation (ms)
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .querySelector("#ai-integration-btn")
+        .addEventListener("click", () => {
+          const targetSection = document.querySelector(".pricing-section");
+
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+            });
+          } else {
+            console.error("Target element #pricing not found.");
+          }
+        });
+      document.querySelectorAll(".choose-plan").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const plan = btn.dataset.plan;
+          const price = btn.dataset.price;
+
+          const textarea = document.querySelector("#ai-project-requirements");
+          const allCards = document.querySelectorAll(".price-card");
+
+          // Clear previous selections
+          allCards.forEach((card) => {
+            card.classList.remove("selected");
+            const badge = card.querySelector(".selected-badge");
+            if (badge) badge.remove();
+          });
+
+          // highlight active card
+          const card = btn.closest(".price-card");
+          card.classList.add("selected");
+
+          // badge
+          const badge = document.createElement("div");
+          badge.className = "selected-badge";
+          badge.textContent = "Selected";
+          card.appendChild(badge);
+
+          // update form textarea
+          if (textarea) {
+            textarea.value =
+              `Package Selected: ${plan} (${price})\n\n` +
+              `Please describe how you want AI to improve your business:\n`;
+          }
+
+          // scroll to form
+          document.querySelector(".form-box").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

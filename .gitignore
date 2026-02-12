@@ -1,0 +1,4 @@
+.tbc-env/
+theboxcoders/db.sqlite3
+theboxcoders/staticfiles/
+__pycache__/

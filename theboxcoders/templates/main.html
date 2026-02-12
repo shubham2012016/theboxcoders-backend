@@ -1,0 +1,1485 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Primary SEO Meta -->
+    <meta
+      name="description"
+      content="The Box Coders is a Delhi-based software development and AI automation company helping businesses with custom web development, Python automation, CRM systems, WhatsApp, Instagram, Facebook and Tally integrations."
+    />
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="The Box Coders - Software Development & AI Automation Company in Delhi, India."
+    />
+    <meta
+      property="og:description"
+      content="The Box Coders is a Delhi-based software development and AI automation company helping businesses with custom web development, Python automation, CRM systems, WhatsApp, Instagram, Facebook and Tally integrations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static 'assets/og-card.jpg' %}" />
+    <meta property="og:site_name" content="The Box Coders" />
+
+    <!-- Geo SEO -->
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="Delhi" />
+    <meta name="geo.position" content="28.6139;77.2090" />
+    <meta name="ICBM" content="28.6139, 77.2090" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="The Box Coders - Software Development & AI Automation Company in Delhi, India."
+    />
+    <meta
+      name="twitter:description"
+      content="The Box Coders is a Delhi-based software development and AI automation company helping businesses with custom web development, Python automation, CRM systems, WhatsApp, Instagram, Facebook and Tally integrations."
+    />
+    <meta name="twitter:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon-icons/logo-16.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon-icons/logo-32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="{% static 'favicon-icons/logo-48.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="{% static 'favicon-icons/logo-64.png' %}"
+    />
+
+    <!-- High-Resolution for Chrome / Android -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{% static 'favicon-icons/logo-192.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="{% static 'favicon-icons/logo-256.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="{% static 'favicon-icons/logo-512.png' %}"
+    />
+
+    <!-- Apple Touch Icons (iOS / iPadOS) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{% static 'favicon-icons/logo-120.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="{% static 'favicon-icons/logo-152.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="{% static 'favicon-icons/logo-167.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicon-icons/logo-180.png' %}"
+    />
+
+    <!-- Fallback ICO (for legacy Windows & old browsers) -->
+    <link
+      rel="icon"
+      href="{% static 'favicon-icons/theboxcoderslogo.ico' %}"
+      sizes="any"
+    />
+
+    <!-- Safari Pinned Tab -->
+    <link
+      rel="mask-icon"
+      href="{% static 'favicon-icons/logo.svg' %}"
+      color="#000000"
+    />
+
+    <!-- Windows Tile -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="{% static 'favicon-icons/logo-144.png' %}"
+    />
+
+    <!-- Manifest (For PWA, Android Home Screen) -->
+    <link rel="manifest" href="{% static 'favicon-icons/site.webmanifest' %}" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>
+      Software Development & AI Automation Company in Delhi, India | The Box
+      Coders
+    </title>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="desktop-header">
+        <div class="company-name">
+          <img
+            src="{% static 'assets/logo.svg' %}"
+            alt="The Box Coders software development company logo"
+          />
+          TheBoxCoders
+        </div>
+        <div class="desktop-menu">
+          <a href="{% url 'index' %}" class="menu-item active-page">Home</a>
+          <a href="{% url 'about' %}" class="menu-item">About</a>
+          <a href="{% url 'contact' %}" class="menu-item">Contact</a>
+        </div>
+        <div class="contact-number">
+          {% for contact in contacts %}
+          <a href="tel:{{contact.phone_number}}"> {{contact.phone_number}} </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="mobile-header">
+        <div class="the-box-coders-name-and-logo">
+          <img
+            src="{% static 'assets/logo.svg' %}"
+            alt="The Box Coders software development company logo"
+          />
+          <span>The Box Coders</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu-container">
+        <a href="{% url 'index' %}" class="menu-item active-page-mobile">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M15 25.0997C15 25.0997 24 25.0997 24 25.0997L24 11.567L13.5 3.4003L3 11.567L3 25.0997L12 25.0997L12 16.0997L15 16.0997C15 16.0997 15 25.0997 15 25.0997ZM27 26.5997C27 27.4282 26.3284 28.0997 25.5 28.0997C25.5 28.0997 1.5 28.0997 1.5 28.0997C0.67158 28.0997 0 27.4282 0 26.5997C0 26.5997 0 10.8333 0 10.8333C0 10.3705 0.213705 9.93349 0.57909 9.64931C0.57909 9.64931 12.5791 0.315968 12.5791 0.315968C13.1208 -0.105322 13.8792 -0.105322 14.4209 0.315968C14.4209 0.315968 26.4208 9.64931 26.4208 9.64931C26.7863 9.93349 27 10.3705 27 10.8333C27 10.8333 27 26.5997 27 26.5997Z"
+                fill="#808080"
+                transform="translate(4.5 3.4)"
+              />
+            </g>
+          </svg>
+        </a>
+
+        <a href="{% url 'about' %}" class="menu-item">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M0 1.5C0 0.67158 0.67158 0 1.5 0C1.5 0 28.5 0 28.5 0C29.3284 0 30 0.67158 30 1.5C30 1.5 30 25.5 30 25.5C30 26.3284 29.3284 27 28.5 27C28.5 27 1.5 27 1.5 27C0.67158 27 0 26.3284 0 25.5C0 25.5 0 1.5 0 1.5ZM3 3C3 3 3 24 3 24L27 24L27 3C27 3 3 3 3 3ZM6 6C6 6 15 6 15 6L15 15L6 15C6 15 6 6 6 6ZM9 9C9 9 9 12 9 12L12 12L12 9C12 9 9 9 9 9ZM18 9C18 9 24 9 24 9L24 6L18 6C18 6 18 9 18 9ZM24 15C24 15 18 15 18 15L18 12L24 12C24 12 24 15 24 15ZM6 18C6 18 6 21 6 21L24 21L24 18C24 18 6 18 6 18Z"
+                fill="#808080"
+                transform="translate(3 4.5)"
+              />
+            </g>
+          </svg>
+        </a>
+
+        <a href="{% url 'contact' %}" class="menu-item">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M4.5 30C2.01473 30 0 27.9854 0 25.5C0 25.5 0 4.5 0 4.5C0 2.01472 2.01473 0 4.5 0C4.5 0 25.5 0 25.5 0C26.3284 0 27 0.67158 27 1.5C27 1.5 27 28.5 27 28.5C27 29.3284 26.3284 30 25.5 30C25.5 30 4.5 30 4.5 30ZM24 27C24 27 24 24 24 24C24 24 4.5 24 4.5 24C3.67158 24 3 24.6716 3 25.5C3 26.3284 3.67158 27 4.5 27C4.5 27 24 27 24 27ZM3 21.2561C3.46917 21.0903 3.97404 21 4.5 21C4.5 21 24 21 24 21L24 3C24 3 4.5 3 4.5 3C3.67158 3 3 3.67158 3 4.5C3 4.5 3 21.2561 3 21.2561ZM13.5 12C11.8431 12 10.5 10.6569 10.5 9C10.5 7.34315 11.8431 6 13.5 6C15.1569 6 16.5 7.34315 16.5 9C16.5 10.6569 15.1569 12 13.5 12ZM9 18C9 15.5146 11.0146 13.5 13.5 13.5C15.9854 13.5 18 15.5146 18 18C18 18 9 18 9 18Z"
+                fill="#808080"
+                transform="translate(4.5 3)"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {% include "contact-btn.html" %}
+
+    <div class="main-container">
+      <div class="home-page">
+        <div class="page-one">
+          <div class="page-one-content-box">
+            <div class="website-intro">
+              <h1>
+                Software Development &<br />AI Automation Solutions <br />for
+                Businesses
+              </h1>
+              <p>We Build Digital Tools</p>
+              <p>That Help Businesses</p>
+              <p><b>Grow </b>By Solving Real World Problems</p>
+              <button id="consultation-form">Get Started ></button>
+            </div>
+          </div>
+          <div class="object">
+            <script
+              type="module"
+              src="https://unpkg.com/@splinetool/viewer@1.10.97/build/spline-viewer.js"
+            ></script>
+            <spline-viewer
+              loading="lazy"
+              url="https://prod.spline.design/wq23zgoqBKbkd33U/scene.splinecode"
+            ></spline-viewer>
+          </div>
+        </div>
+
+        <div class="page-two">
+          <p>
+            <span id="undesigned-font">We</span>
+            <span id="designed-fonts">Simplify Your Business Operations</span
+            ><br />
+            <span id="undesigned-font">By Providing</span>
+            <span id="designed-fonts">Powerful Softwares</span>
+          </p>
+        </div>
+
+        <div class="page-three">
+          <div class="web-devlopment">
+            <div class="web-dev-animation" data-aos="fade-left">
+              <script
+                src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                type="module"
+              ></script>
+              <dotlottie-wc
+                src="https://lottie.host/d5559b86-08ca-4c51-96ad-de712e665eb6/y51d8ESsNR.lottie"
+                style="width: 300px; height: 300px"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+            <div class="web-dev-info">
+              <div class="main-heading" data-aos="fade-up">
+                <h2>
+                  Your Digital <span class="highlight">Success</span><br />
+                  Start Here
+                </h2>
+              </div>
+              <div class="paragraph" data-aos="fade-left">
+                End-to-End Web Development solution for Modern Businesses.
+              </div>
+              <div class="tagline" data-aos="fade-left" data-aos-delay="200">
+                <p><b>We Build, Design, and Launch.</b></p>
+              </div>
+              <div class="services">
+                <p data-aos="fade-down">
+                  <strong>Custom Web Development: </strong>We don't use
+                  templates. We engineer scalable, high-performance websites and
+                  applications built exactly to your business logic and future
+                  expansion needs.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>UX/UI Design: </strong>We design beautiful, intuitive,
+                  and conversion-optimized user interfaces (UI) and user
+                  experiences (UX) that ensure your visitors become customers.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>Backend Development: </strong>We build the powerful
+                  and secure server-side logic, databases, and APIs necessary to
+                  handle high traffic, process data accurately, and protect
+                  sensitive information.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>Full-Stack Engineering: </strong>Our full-stack
+                  expertise ensures both the user-facing design (frontend) and
+                  the underlying data systems (backend) communicate perfectly,
+                  delivering reliable performance and a cohesive experience.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>Launch Support: </strong>We handle all the
+                  complexities of going live, including hosting setup, domain
+                  configuration, and rigorous testing, ensuring a smooth, secure
+                  launch from day one.
+                </p>
+              </div>
+              <a href="{% url 'web_devlopment'%}">Start Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-four">
+          <div class="python-services">
+            <div class="python-logo" data-aos="fade-left">
+              <script
+                src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                type="module"
+              ></script>
+              <dotlottie-wc
+                src="https://lottie.host/bec5533c-2b94-4805-bf74-5083704aa784/AzsPF3c8f9.lottie"
+                style="width: 300px; height: 300px"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+            <div class="pyhton-services-info">
+              <div class="main-heading" data-aos="fade-up">
+                <h2>
+                  Automate Your <span class="highlight">Business,</span><br />
+                  Reclaim Your Time
+                </h2>
+              </div>
+              <div class="paragraph" data-aos="fade-left">
+                Stop wasting hours on repetitive tasks. Our custom Python
+                scripts bring efficiency, accuracy, and speed to your workflow.
+              </div>
+              <div class="services">
+                <p data-aos="fade-down">
+                  <b>What We Automate</b><br /><strong
+                    >Data Harvesting & Web Scraping:</strong
+                  >
+                  We build custom scripts to automatically extract pricing,
+                  product catalogs, contact lists, and market intelligence from
+                  the web, giving you clean data for instant analysis and
+                  strategic decisions.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>Workflow Automation:</strong> Eliminate repetitive
+                  manual tasks. We analyze your daily processes (like data
+                  transfer, report generation, or file organization) and replace
+                  them with precise, scheduled scripts, saving your team hours
+                  every single week.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>Custom Utility Tools:</strong> Need a unique internal
+                  tool, a specialized file converter, or an API integrator? We
+                  create robust, lightweight programs to solve your exact, niche
+                  operational challenges.
+                </p>
+              </div>
+              <a href="{% url 'python_services'%}">Start Project</a>
+              <!-- <button id="python-booking-button" data-aos="zoom-in">Start Project</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="page-five">
+          <div class="ai-services">
+            <div class="ai-logo">
+              <script
+                src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                type="module"
+              ></script>
+              <dotlottie-wc
+                src="https://lottie.host/082db0c2-4d76-446a-96c1-6e3f6d047ed6/89iRn9RlBT.lottie"
+                style="width: 300px; height: 300px"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+            <div class="ai-info">
+              <div class="main-heading" data-aos="fade-up">
+                <h2>
+                  Future-Proof Your <br />Business with
+                  <span class="highlight">AI</span>
+                </h2>
+              </div>
+              <div class="paragraph" data-aos="fade-left">
+                Unlock revolutionary efficiency. We integrate the world's
+                leading AI models to build custom, intelligent solutions for
+                your unique challenges.
+              </div>
+              <div class="services">
+                <p data-aos="fade-down"><b>AI Solutions We Deliver</b></p>
+                <p data-aos="fade-down">
+                  <strong>Generative Art & Media (DALL-E 3):</strong> Create
+                  unique, high-quality images and assets on demand.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>Intelligent Chatbots & NLP:</strong> Enhance customer
+                  support and automate communications.
+                </p>
+                <p data-aos="fade-down">
+                  <strong>Data Analysis & Prediction:</strong> Turn raw data
+                  into actionable insights for strategic decisions.
+                </p>
+              </div>
+              <a href="{% url 'ai_intergration_services'%}"
+                >Start AI Transformation</a
+              >
+              <!-- <button id="ai-transformation-button">Start AI Transformation</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="page-six">
+          <div class="why-partner-with-theboxcoders">
+            <h2>Why Partner With The Box Coders?</h2>
+            <p style="color: #808080">
+              Your Vision, Our Expertise: Building Digital Futures Together.
+            </p>
+          </div>
+
+          <div class="partenering-option-container">
+            <div
+              class="partenering-card"
+              data-aos="fade-left"
+              data-aos-delay="250"
+            >
+              <div class="logo">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg
+                  width="150"
+                  height="150"
+                  viewBox="0 0 150 150"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M7.09219 86.6578L7.09219 7.09219L7.09219 90.2047L7.09219 86.6578L7.09219 86.6578ZM9.01406 93.75C6.56302 93.75 4.44792 92.8464 2.66875 91.0391C0.889584 89.2328 0 87.1318 0 84.7359C0 84.7359 0 9.01406 0 9.01406C0 6.61823 0.889584 4.51719 2.66875 2.71093C4.44792 0.903645 6.56302 0 9.01406 0C9.01406 0 47.9922 0 47.9922 0L58.2094 10.2172C58.2094 10.2172 109.736 10.2172 109.736 10.2172C112.132 10.2172 114.233 11.1203 116.039 12.9266C117.846 14.7339 118.75 16.8354 118.75 19.2313C118.75 19.2313 118.75 60.4922 118.75 60.4922L111.658 60.4922C111.658 60.4922 111.658 19.2313 111.658 19.2313C111.658 18.6698 111.478 18.2089 111.117 17.8484C110.757 17.488 110.296 17.3078 109.736 17.3078C109.736 17.3078 55.325 17.3078 55.325 17.3078L45.1078 7.09219C45.1078 7.09219 9.01406 7.09219 9.01406 7.09219C8.45365 7.09219 7.99323 7.2724 7.63281 7.63282C7.2724 7.99325 7.09219 8.45367 7.09219 9.01407C7.09219 9.01407 7.09219 84.736 7.09219 84.736C7.09219 85.2964 7.2724 85.7568 7.63281 86.1172C7.99323 86.4776 8.45365 86.6578 9.01406 86.6578C9.01406 86.6578 52.5844 86.6578 52.5844 86.6578L52.5844 93.75L9.01406 93.75C9.01406 93.75 9.01406 93.75 9.01406 93.75ZM82.6328 108.738L64.0031 90.2047L82.6328 71.6109L87.5719 76.6109L73.9781 90.2047L87.5719 103.798L82.6328 108.738L82.6328 108.738ZM106.214 108.738L101.273 103.798L114.867 90.2047L101.273 76.6109L106.214 71.6109L124.903 90.2047L106.214 108.738L106.214 108.738Z"
+                      fill="#69A2CE"
+                      transform="translate(15.625 28.125)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="card-title">
+                <p>Custom Software Development</p>
+              </div>
+              <div class="card-details">
+                <p>
+                  Tailored solutions built precisely to meet your unique
+                  business needs and challenges.
+                </p>
+              </div>
+            </div>
+
+            <div class="partenering-card" data-aos="fade-left">
+              <div class="logo">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg
+                  width="150"
+                  height="150"
+                  viewBox="0 0 150 150"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M28.2937 93.75C27.501 93.75 26.75 93.5516 26.0406 93.1547C25.3312 92.7578 24.788 92.2151 24.4109 91.5266C24.4109 91.5266 12.1281 69.4703 12.1281 69.4703L22.0797 69.4703L28.3422 81.25L41.5625 81.25L41.5625 76.8625L30.9734 76.8625L24.7125 65.0844L9.74844 65.0844C9.74844 65.0844 0.625 49.0984 0.625 49.0984C0.416668 48.7224 0.260418 48.3521 0.15625 47.9875C0.0520821 47.6229 0 47.2521 0 46.875C0 46.7063 0.208332 45.9448 0.625 44.5906C0.625 44.5906 9.74844 28.6063 9.74844 28.6063L24.7125 28.6063L30.9734 16.8266L41.5625 16.8266L41.5625 12.4406L28.3422 12.4406L22.0797 24.2188L12.1281 24.2188C12.1281 24.2188 24.4109 2.22343 24.4109 2.22343C24.788 1.53489 25.3312 0.992184 26.0406 0.595312C26.75 0.198441 27.501 0 28.2937 0C28.2937 0 45.4687 0 45.4687 0C46.7427 0 47.8125 0.422916 48.6781 1.26875C49.5438 2.11354 49.9766 3.19323 49.9766 4.50781C49.9766 4.50781 49.9766 29.9875 49.9766 29.9875L37.6562 29.9875L33.2703 34.375L49.9766 34.375L49.9766 53.425L35.8062 53.425L30.0125 41.7063L16.3234 41.7063L11.9359 46.0938L27.1281 46.0938L33.0172 57.8125L49.9766 57.8125C49.9766 57.8125 49.9766 89.2422 49.9766 89.2422C49.9766 90.5568 49.5438 91.6365 48.6781 92.4813C47.8125 93.3271 46.7427 93.75 45.4687 93.75C45.4687 93.75 28.2937 93.75 28.2937 93.75C28.2937 93.75 28.2937 93.75 28.2937 93.75ZM68.0656 93.75C65.3646 93.75 63.0568 92.7922 61.1422 90.8766C59.2276 88.962 58.2703 86.6547 58.2703 83.9547C58.2703 81.887 58.8531 80.0276 60.0187 78.3766C61.1844 76.7266 62.6849 75.5651 64.5203 74.8922C64.5203 74.8922 64.5203 18.8578 64.5203 18.8578C62.6849 18.1849 61.1844 17.0234 60.0187 15.3734C58.8531 13.7224 58.2703 11.863 58.2703 9.79531C58.2703 7.05573 59.2177 4.73803 61.1125 2.84219C63.0073 0.947399 65.325 0 68.0656 0C70.8052 0 73.1229 0.947399 75.0187 2.84219C76.9135 4.73803 77.8609 7.05573 77.8609 9.79531C77.8609 11.863 77.2781 13.7224 76.1125 15.3734C74.9458 17.0234 73.4453 18.1849 71.6109 18.8578C71.6109 18.8578 71.6109 37.2719 71.6109 37.2719C71.6109 37.2719 88.0766 27.3562 88.0766 27.3562C87.5641 24.4073 88.2917 21.775 90.2594 19.4594C92.226 17.1437 94.724 15.9859 97.7531 15.9859C100.493 15.9859 102.81 16.9333 104.706 18.8281C106.601 20.7229 107.548 23.0406 107.548 25.7813C107.548 28.5219 106.601 30.8396 104.706 32.7344C102.81 34.6292 100.493 35.5766 97.7531 35.5766C96.6073 35.5766 95.5234 35.3906 94.5016 35.0187C93.4797 34.6458 92.5724 34.1589 91.7797 33.5578C91.7797 33.5578 74.3625 44.075 74.3625 44.075C74.3625 44.075 92.789 58.8469 92.789 58.8469C93.5182 58.4135 94.3094 58.0828 95.1625 57.8547C96.0156 57.6266 96.8792 57.5125 97.7531 57.5125C100.493 57.5125 102.81 58.4599 104.706 60.3547C106.601 62.2495 107.548 64.5672 107.548 67.3078C107.548 70.0484 106.601 72.3661 104.706 74.2609C102.81 76.1557 100.493 77.1031 97.7531 77.1031C94.3073 77.1031 91.637 75.7469 89.7422 73.0344C87.8474 70.3219 87.3963 67.4396 88.3891 64.3875C88.3891 64.3875 71.6109 50.9125 71.6109 50.9125C71.6109 50.9125 71.6109 75.0484 71.6109 75.0484C73.3818 75.7214 74.8401 76.8469 75.9859 78.425C77.1318 80.0042 77.7047 81.8474 77.7047 83.9547C77.7047 86.6547 76.7729 88.962 74.9094 90.8766C73.0469 92.7922 70.7656 93.75 68.0656 93.75C68.0656 93.75 68.0656 93.75 68.0656 93.75Z"
+                      fill="#AF7CD2"
+                      transform="translate(20.577 28.125)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="card-title">
+                <p>Advanced AI & Automation</p>
+              </div>
+              <div class="card-details">
+                <p>
+                  Leverage cutting-edge AI and intelligent automation to boost
+                  efficiency and innovation.
+                </p>
+              </div>
+            </div>
+
+            <div class="partenering-card" data-aos="fade-up">
+              <div class="logo">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg
+                  width="150"
+                  height="150"
+                  viewBox="0 0 150 150"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M46.875 118.389C33.2938 114.663 22.0859 106.58 13.2516 94.1406C4.41719 81.7011 0 67.925 0 52.8125C0 52.8125 0 17.5484 0 17.5484L46.875 0L93.75 17.5484C93.75 17.5484 93.75 52.8125 93.75 52.8125C93.75 67.925 89.3328 81.7011 80.4984 94.1406C71.6641 106.58 60.4563 114.663 46.875 118.389ZM46.875 110.986C58.5333 107.188 68.0786 99.8844 75.5109 89.075C82.9422 78.2656 86.6578 66.1781 86.6578 52.8125C86.6578 52.8125 86.6578 22.4891 86.6578 22.4891L46.875 7.53595L7.09219 22.4891C7.09219 22.4891 7.09219 52.8125 7.09219 52.8125C7.09219 66.1781 10.8078 78.2656 18.2391 89.075C25.6714 99.8844 35.2167 107.188 46.875 110.986C46.875 110.986 46.875 110.986 46.875 110.986ZM33.3531 83.15C33.3531 83.15 60.3969 83.15 60.3969 83.15C61.701 83.15 62.7781 82.7245 63.6281 81.8735C64.4781 81.0235 64.9031 79.9464 64.9031 78.6422C64.9031 78.6422 64.9031 57.8484 64.9031 57.8484C64.9031 56.5443 64.4781 55.4672 63.6281 54.6172C62.7781 53.7672 61.701 53.3422 60.3969 53.3422C60.3969 53.3422 58.7141 53.3422 58.7141 53.3422C58.7141 53.3422 58.7141 47.0922 58.7141 47.0922C58.7141 43.8151 57.5703 41.0328 55.2828 38.7453C52.9953 36.4568 50.2125 35.3125 46.9344 35.3125C43.6573 35.3125 40.875 36.4568 38.5875 38.7453C36.3 41.0328 35.1563 43.8151 35.1563 47.0922C35.1563 47.0922 35.1563 53.3422 35.1563 53.3422C35.1563 53.3422 33.3531 53.3422 33.3531 53.3422C32.049 53.3422 30.9719 53.7672 30.1219 54.6172C29.2719 55.4672 28.8469 56.5443 28.8469 57.8484C28.8469 57.8484 28.8469 78.6422 28.8469 78.6422C28.8469 79.9464 29.2719 81.0234 30.1219 81.8734C30.9719 82.7245 32.049 83.15 33.3531 83.15C33.3531 83.15 33.3531 83.15 33.3531 83.15ZM39.5437 53.3422C39.5437 53.3422 39.5437 47.0922 39.5437 47.0922C39.5437 45.0891 40.275 43.4141 41.7375 42.0672C43.199 40.7214 44.9312 40.0485 46.9344 40.0485C48.9385 40.0485 50.6714 40.7214 52.1328 42.0672C53.5953 43.4141 54.3266 45.0891 54.3266 47.0922C54.3266 47.0922 54.3266 53.3422 54.3266 53.3422L39.5437 53.3422L39.5437 53.3422Z"
+                      fill="#58AF64"
+                      transform="translate(28.125 15.769)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="card-title">
+                <p>Secure Cloud Hosting</p>
+              </div>
+              <div class="card-details">
+                <p>
+                  Reliable and secure hosting solutions ensure your applications
+                  are always available and protected.
+                </p>
+              </div>
+            </div>
+
+            <div class="partenering-card" data-aos="fade-right">
+              <div class="logo">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg
+                  width="150"
+                  height="150"
+                  viewBox="0 0 150 150"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M55.5297 106.25C55.5297 106.25 55.5297 99.1578 55.5297 99.1578C55.5297 99.1578 103.486 99.1578 103.486 99.1578C104.007 99.1578 104.457 98.9979 104.838 98.6781C105.218 98.3573 105.408 97.9365 105.408 97.4156C105.408 97.4156 105.408 51.4187 105.408 51.4187C105.408 38.9594 100.913 28.4667 91.9219 19.9406C82.9302 11.4146 72.0834 7.15157 59.3813 7.15157C46.6792 7.15157 35.8302 11.4146 26.8344 19.9406C17.8396 28.4667 13.3422 38.9594 13.3422 51.4187C13.3422 51.4187 13.3422 88.2203 13.3422 88.2203C13.3422 88.2203 10.9375 88.2203 10.9375 88.2203C7.94062 88.2203 5.36875 87.1771 3.22187 85.0906C1.07396 83.0031 0 80.4609 0 77.4641C0 77.4641 0 65.325 0 65.325C0 63.2979 0.577084 61.4406 1.73125 59.7531C2.88542 58.0667 4.39167 56.7109 6.25 55.6859C6.25 55.6859 6.53906 47.7047 6.53906 47.7047C7.05156 40.9016 8.81823 34.5995 11.8391 28.7984C14.8599 22.9974 18.7339 17.9474 23.4609 13.6484C28.1891 9.34947 33.6458 5.99999 39.8312 3.6C46.0177 1.2 52.5323 0 59.375 0C66.2177 0 72.7161 1.2 78.8703 3.6C85.0245 5.99999 90.4813 9.33332 95.2406 13.6C100 17.8667 103.874 22.9005 106.863 28.7016C109.851 34.5037 111.634 40.8057 112.211 47.6078C112.211 47.6078 112.5 55.4328 112.5 55.4328C114.319 56.2901 115.815 57.5162 116.989 59.1109C118.163 60.7057 118.75 62.4844 118.75 64.4469C118.75 64.4469 118.75 78.4016 118.75 78.4016C118.75 80.3641 118.163 82.1427 116.989 83.7375C115.815 85.3323 114.319 86.5583 112.5 87.4156C112.5 87.4156 112.5 97.4156 112.5 97.4156C112.5 99.8646 111.612 101.949 109.836 103.669C108.06 105.39 105.943 106.25 103.486 106.25C103.486 106.25 55.5297 106.25 55.5297 106.25ZM41.7984 63.0406C40.5839 63.0406 39.5536 62.6286 38.7078 61.8047C37.863 60.9807 37.4406 59.9609 37.4406 58.7453C37.4406 57.5307 37.8724 56.5104 38.7359 55.6844C39.6005 54.8594 40.6406 54.4469 41.8563 54.4469C43.0708 54.4469 44.1005 54.8693 44.9453 55.7141C45.7912 56.5578 46.2141 57.5875 46.2141 58.8031C46.2141 60.0177 45.7818 61.0276 44.9172 61.8328C44.0526 62.638 43.013 63.0406 41.7984 63.0406C41.7984 63.0406 41.7984 63.0406 41.7984 63.0406ZM76.8937 63.0406C75.6792 63.0406 74.6495 62.6286 73.8047 61.8047C72.9588 60.9807 72.5359 59.9609 72.5359 58.7453C72.5359 57.5307 72.9682 56.5104 73.8328 55.6844C74.6974 54.8594 75.737 54.4469 76.9516 54.4469C78.1661 54.4469 79.1964 54.8693 80.0422 55.7141C80.887 56.5578 81.3094 57.5875 81.3094 58.8031C81.3094 60.0177 80.8776 61.0276 80.0141 61.8328C79.1495 62.638 78.1094 63.0406 76.8938 63.0406C76.8938 63.0406 76.8937 63.0406 76.8937 63.0406ZM24.1953 54.375C23.5464 44.175 26.7193 35.4469 33.7141 28.1906C40.7089 20.9354 49.375 17.3078 59.7125 17.3078C68.1969 17.3078 75.6224 20.0323 81.9891 25.4812C88.3557 30.9292 92.2479 37.8318 93.6656 46.1891C84.9563 46.0849 76.9537 43.7115 69.6578 39.0687C62.362 34.425 56.7219 28.2172 52.7375 20.4453C51.1688 28.2172 47.8526 35.088 42.7891 41.0578C37.7245 47.0276 31.5266 51.4667 24.1953 54.375C24.1953 54.375 24.1953 54.375 24.1953 54.375Z"
+                      fill="#2E83BC"
+                      transform="translate(15.625 21.875)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="card-title">
+                <p>Dedicated 24/7 Support</p>
+              </div>
+              <div class="card-details">
+                <p>
+                  Round-the-clock assistance and priority support whenever you
+                  need us, ensuring seamless operations.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="partenering-card"
+              data-aos="fade-right"
+              data-aos-delay="250"
+            >
+              <div class="logo">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg
+                  width="150"
+                  height="150"
+                  viewBox="0 0 150 150"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M59.3641 82.7877C63.9704 82.7877 68.0766 81.4033 71.6829 78.6346C75.2881 75.8669 77.9162 72.3393 79.5672 68.0518C79.5672 68.0518 39.1829 68.0518 39.1829 68.0518C40.8339 72.3393 43.4584 75.8669 47.0563 78.6346C50.6553 81.4033 54.7579 82.7877 59.3641 82.7877C59.3641 82.7877 59.3641 82.7877 59.3641 82.7877ZM44.9656 59.2296C47.2406 59.2296 49.1692 58.4338 50.7515 56.8421C52.3338 55.2504 53.125 53.3171 53.125 51.0421C53.125 48.7681 52.3291 46.84 50.7375 45.2577C49.1448 43.6754 47.2114 42.8843 44.9375 42.8843C42.6635 42.8843 40.7354 43.6801 39.1531 45.2718C37.5708 46.8635 36.7797 48.7963 36.7797 51.0702C36.7797 53.3452 37.5755 55.2739 39.1672 56.8562C40.7588 58.4384 42.6916 59.2296 44.9656 59.2296C44.9656 59.2296 44.9656 59.2296 44.9656 59.2296ZM73.8125 59.2296C76.0865 59.2296 78.0146 58.4338 79.5969 56.8421C81.1792 55.2504 81.9703 53.3171 81.9703 51.0421C81.9703 48.7681 81.1745 46.84 79.5828 45.2577C77.9911 43.6754 76.0583 42.8843 73.7844 42.8843C71.5094 42.8843 69.5807 43.6801 67.9985 45.2718C66.4162 46.8634 65.625 48.7963 65.625 51.0702C65.625 53.3452 66.4208 55.2739 68.0125 56.8562C69.6052 58.4384 71.5385 59.2296 73.8125 59.2296C73.8125 59.2296 73.8125 59.2296 73.8125 59.2296ZM33.7953 27.0094C33.7953 27.0094 51.2859 4.01406 51.2859 4.01406C52.3411 2.64114 53.5667 1.62865 54.9625 0.976563C56.3583 0.325518 57.8333 0 59.3875 0C60.9417 9.53674e-06 62.412 0.325527 63.7984 0.976563C65.1849 1.62865 66.4068 2.64114 67.4641 4.01406C67.4641 4.01406 84.9547 27.0094 84.9547 27.0094C84.9547 27.0094 111.694 36.0563 111.694 36.0563C113.93 36.8104 115.665 38.1031 116.898 39.9344C118.133 41.7646 118.75 43.787 118.75 46.0016C118.75 47.0245 118.601 48.0505 118.302 49.0797C118.004 50.1099 117.516 51.0693 116.839 51.9578C116.839 51.9578 99.5672 76.0828 99.5672 76.0828C99.5672 76.0828 100.192 101.934 100.192 101.934C100.232 104.889 99.2359 107.404 97.2047 109.48C95.1734 111.557 92.7453 112.595 89.9203 112.595C89.8453 112.595 88.9021 112.459 87.0906 112.186C87.0906 112.186 59.375 104.242 59.375 104.242C59.375 104.242 31.6828 112.177 31.6828 112.177C31.1464 112.391 30.6187 112.515 30.1 112.547C29.5823 112.579 29.1078 112.595 28.6766 112.595C25.8172 112.595 23.3896 111.553 21.3937 109.467C19.399 107.382 18.4536 104.819 18.5578 101.778C18.5578 101.778 19.1828 75.9203 19.1828 75.9203C19.1828 75.9203 1.85156 51.8625 1.85156 51.8625C1.21406 50.9198 0.746353 49.9364 0.448439 48.9125C0.149479 47.8885 0 46.8646 0 45.8406C0 43.6521 0.624479 41.6448 1.87344 39.8187C3.12135 37.9927 4.86875 36.7187 7.11563 35.9969C7.11563 35.9969 33.7953 27.0094 33.7953 27.0094L33.7953 27.0094ZM38.1484 33.1234C38.1484 33.1234 7.8375 43.3406 7.8375 43.3406C7.23646 43.5406 6.82552 43.951 6.60469 44.5719C6.38386 45.1938 6.47396 45.7651 6.875 46.2859C6.875 46.2859 26.4297 73.9531 26.4297 73.9531C26.4297 73.9531 25.6484 103.713 25.6484 103.713C25.6089 104.394 25.8495 104.925 26.3703 105.306C26.8912 105.686 27.4719 105.796 28.1125 105.636C28.1125 105.636 59.375 96.8016 59.375 96.8016C59.375 96.8016 90.6375 105.792 90.6375 105.792C91.2781 105.953 91.8589 105.843 92.3797 105.463C92.9005 105.081 93.1412 104.55 93.1016 103.869C93.1016 103.869 92.3203 73.9531 92.3203 73.9531C92.3203 73.9531 111.875 46.5984 111.875 46.5984C112.276 46.0776 112.366 45.5063 112.145 44.8844C111.924 44.2635 111.514 43.8531 110.912 43.6531C110.912 43.6531 80.6016 33.1234 80.6016 33.1234C80.6016 33.1234 60.8781 7.23438 60.8781 7.23438C60.5167 6.71354 60.0156 6.45313 59.375 6.45313C58.7344 6.45313 58.2333 6.71354 57.8719 7.23438C57.8719 7.23438 38.1484 33.1234 38.1484 33.1234L38.1484 33.1234Z"
+                      fill="#E7A92D"
+                      transform="translate(15.625 15.53)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="card-title">
+                <p>Exceptional Client Satisfaction</p>
+              </div>
+              <div class="card-details">
+                <p>
+                  Join our 95%+ satisfied clients who trust us for quality,
+                  reliability, and outstanding results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-seven">
+          <div class="client-testimonials">
+            <h2>What Our Clients Are Saying</h2>
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="36"
+                  height="36"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"
+                  ></path>
+                </svg>
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <div class="statement" data-aos="fade-up">
+                    <p>
+                      "We needed a robust e-commerce integration for Tally, and
+                      The Box Coders delivered a seamless, error-free solution.
+                      Their 24/7 support during deployment was invaluable. We
+                      finally have real-time accounting."
+                    </p>
+                  </div>
+                  <div class="client-name" data-aos="fade-right">
+                    <p>— David R. | CFO, Global Trading Solutions</p>
+                  </div>
+                  <div class="service-info" data-aos="fade-down">
+                    <p>(Service: Tally Software Automation)</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div class="statement" data-aos="fade-up">
+                    <p>
+                      "Integrating the AI model for automated content creation
+                      was the edge we needed. The speed at which we can generate
+                      unique visual assets now is unmatched. They truly know how
+                      to future-proof a business."
+                    </p>
+                  </div>
+                  <div class="client-name" data-aos="fade-right">
+                    <p>— Alex V. | Product Lead, CreativeTech</p>
+                  </div>
+                  <div class="service-info" data-aos="fade-down">
+                    <p>(Service: AI Integration)</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="statement" data-aos="fade-up">
+                    <p>
+                      "Switching to their automated workflow for our social
+                      media scheduling has been a game-changer. We spend 80%
+                      less time managing Facebook and Instagram and have seen a
+                      noticeable bump in engagement. Truly effortless."
+                    </p>
+                  </div>
+                  <div class="client-name" data-aos="fade-right">
+                    <p>— Maya S. | Digital Marketing Manager</p>
+                  </div>
+                  <div class="service-info" data-aos="fade-down">
+                    <p>(Service: Social Media Automation)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-eight">
+          <div class="instagram-services">
+            <div class="instagram-logo" data-aos="fade-left">
+              <script
+                src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                type="module"
+              ></script>
+              <dotlottie-wc
+                src="https://lottie.host/4d47a0d6-454b-44d3-b9fe-f116d0612f09/KmzfNuONRz.lottie"
+                style="width: 300px; height: 300px"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+            <div class="instagram-services-info">
+              <div class="main-heading" data-aos="fade-up">
+                <h2>
+                  Elevate Your <span class="highlight">Instagram,</span><br />
+                  Effortlessly
+                </h2>
+              </div>
+              <div class="paragraph" data-aos="fade-left">
+                Transform your Instagram strategy with smart automation. Gain a
+                competitive edge by saving time and maximizing impact on your
+                social presence.
+              </div>
+              <div class="services" data-aos="fade-down">
+                <p data-aos="fade-down"><b>What We Automate For You:</b></p>
+                <p data-aos="fade-down">
+                  <b>Smart Content Scheduling:</b> Plan an publish posts, Reels,
+                  and Stories at optimal times.
+                </p>
+                <p data-aos="fade-down">
+                  <b>Advanced Analytics & Reporting:</b> Track follower growth,
+                  engagement, reach, and impressions in detail.
+                </p>
+                <p data-aos="fade-down">
+                  <b>Profile & Account Management:</b> Efficiently manage
+                  multiple business/creator accounts and gather key info.
+                </p>
+              </div>
+              <a href="{% url 'instagram_automation' %}"
+                >Optimize My Instagram Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="page-nine">
+          <div class="facebook-services">
+            <div class="facebook-logo" data-aos="fade-left">
+              <script
+                src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                type="module"
+              ></script>
+              <dotlottie-wc
+                src="https://lottie.host/8361c1ce-3c22-4036-bc15-d75af92de68a/MlbkITWW9A.lottie"
+                style="width: 300px; height: 300px"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+            <div class="facebook-service-info">
+              <div class="main-heading" data-aos="fade-up">
+                <h2>
+                  Maximize Your Reach with <br /><span class="highlight"
+                    >Facebook</span
+                  >
+                  Automation
+                </h2>
+              </div>
+              <div class="paragraph" data-aos="fade-left">
+                <p>
+                  Unlock the full potential of your Facebook presence. Our smart
+                  automation solutions save you time, boost engagement, and
+                  drive conversions.
+                </p>
+              </div>
+              <div class="services">
+                <p data-aos="fade-down">
+                  <b>Automate Your Facebook Strategy</b>
+                </p>
+                <p data-aos="fade-down">
+                  <b>Smart Marketing Dashboard:</b> Streamline post scheduling,
+                  ad management, and audience targeting.
+                </p>
+                <p data-aos="fade-down">
+                  <b>AI-Powered Messenger Chatbots:</b> Provide instant 24/7
+                  customer support and lead qualification.
+                </p>
+                <p data-aos="fade-down">
+                  <b>Deep Performance Analytics:</b> Gain actionable insights
+                  into reach, engagement, and campaign ROI.
+                </p>
+              </div>
+              <a href="{% url 'facebook_automation' %}"
+                >Optimize My Facebook Now</a
+              >
+              <!-- <button id="facebook-automation-booking-form">Optimize My Facebook Now</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="page-ten">
+          <div class="whatsapp-services">
+            <div class="whatsapp-icon" data-aos="fade-left">
+              <script
+                src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                type="module"
+              ></script>
+              <dotlottie-wc
+                src="https://lottie.host/252ffca8-5806-4a37-9ec0-2be6f520a1c2/jddO94pov5.lottie"
+                style="width: 300px; height: 300px"
+                autoplay
+                loop
+              ></dotlottie-wc>
+              <script
+                src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                type="module"
+              ></script>
+            </div>
+            <div class="whatsapp-services-info">
+              <div class="main-heading" data-aos="fade-up">
+                <h2>
+                  Streamline Sales & Support with
+                  <span class="highlight">WhatsApp</span>
+                </h2>
+              </div>
+              <div class="paragraph" data-aos="fade-left">
+                <p>
+                  Revolutionize how you connect with customers. Our WhatsApp
+                  automation solutions enable instant orders, automated
+                  confirmations, and effortless customer service.
+                </p>
+              </div>
+              <div class="services">
+                <p data-aos="fade-down"><b>WhatsApp Solutions We Offer:</b></p>
+                <p data-aos="fade-down">
+                  <b>Automated Order Processing:</b> Enable direct order taking,
+                  product inquiries, and payment links via chat.
+                </p>
+                <p data-aos="fade-down">
+                  <b>Instant Notifications & Documents:</b> Automatically send
+                  order confirmations, shipping updates, and invoice PDFs.
+                </p>
+                <p data-aos="fade-down">
+                  <b>24/7 Customer Engagement:</b> Implement chatbots for FAQs,
+                  support, and personalized outreach.
+                </p>
+              </div>
+              <a href="{% url 'whatsapp_automation' %}"
+                >Start Whatsapp Automation</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="page-eleven">
+          <div class="tally-services">
+            <div
+              class="tally-icon animate__animated animate__pulse animate__infinite"
+              data-aos="fade-left"
+            >
+              <img
+                src="https://cdn.brandfetch.io/idUwCm6jIn/w/2484/h/1142/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"
+                alt="tally prime automation"
+              />
+            </div>
+            <div class="tally-services-info">
+              <div class="main-heading" data-aos="fade-up">
+                <h2>
+                  Tally Automation <br />
+                  Eliminate Manual <span class="highlight">Entries</span>
+                </h2>
+              </div>
+              <div class="paragraph" data-aos="fade-left">
+                <p>
+                  Stop errors and start processing transactions instantly. We
+                  integrate Tally to your existing systems for seamless,
+                  accurate, and real-time accounting.
+                </p>
+              </div>
+              <div class="services">
+                <p data-aos="fade-down"><b>Solutions We Provide</b></p>
+                <p data-aos="fade-down">
+                  <b>Auto-Voucher Generation:</b> Generate sales, purchase, and
+                  payment vouchers automatically
+                </p>
+                <p data-aos="fade-down">
+                  <b>Tally-to-System Integration:</b> Connect Tally to
+                  E-commerce, CRM, or ERP platforms.
+                </p>
+                <p data-aos="fade-down">
+                  <b>Automated Reporting:</b> Get scheduled, custom reports
+                  without lifting a finger.
+                </p>
+              </div>
+              <a href="{% url 'tally_automation' %}">Simplify Accounts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "footer.html" %}
+
+    <div class="consultation-form-container">
+      <div class="consultation-form">
+        <form method="POST" action="{% url 'book_consultation' %}">
+          {% csrf_token %}
+
+          <div class="cunsultation-form-heading">
+            <h2>Book Cunsultation Now</h2>
+            <button type="button">X</button>
+          </div>
+
+          <div class="personal-details">
+            <input type="text" name="name" placeholder="Full Name" required />
+
+            <input
+              type="email"
+              name="email"
+              id="business-email"
+              placeholder="Business Email"
+              required
+            />
+
+            <input
+              type="tel"
+              name="phone_number"
+              id="phone-number"
+              placeholder="Phone number"
+              required
+            />
+
+            <input
+              type="text"
+              name="company_name"
+              placeholder="Company Name (Optional)"
+            />
+
+            <input
+              type="url"
+              name="website_url"
+              id="website-url"
+              placeholder="Company Website (Optional)"
+            />
+          </div>
+
+          <div class="project-details-and-budget">
+            <div class="project-type">
+              <p><b>I'm interested in the following service(s)</b></p>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                value="web"
+                id="web-devlopment"
+                hidden
+              />
+              <label for="web-devlopment">Web Development (End-to-End)</label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                value="python"
+                id="python-scripts"
+                hidden
+              />
+              <label for="python-scripts">
+                Python Scripts / Workflow Automation
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                value="ai"
+                id="ai-service"
+                hidden
+              />
+              <label for="ai-service">
+                AI Integration (Chatbots, Generative Media)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                value="social"
+                id="social-media-automation"
+                hidden
+              />
+              <label for="social-media-automation">
+                Social Media Automation (Facebook, WhatsApp)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                value="tally"
+                id="tally-automation"
+                hidden
+              />
+              <label for="tally-automation">
+                Tally Integration / Accounting Automation
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                value="undecided"
+                id="undecided"
+                hidden
+              />
+              <label for="undecided">Other / Undecided</label>
+            </div>
+
+            <div class="project-budget-and-timeline">
+              <div class="budget">
+                <select name="budget" id="project-budget" required>
+                  <option value="" disabled selected hidden>
+                    What is your estimated project budget?
+                  </option>
+                  <option value="<10k">less than 10,000</option>
+                  <option value="25-50k">25,000 - 50,000</option>
+                  <option value="50-80k">50,000 - 80,000</option>
+                  <option value="80-130k">80,000 - 1,30,000</option>
+                  <option value="130k+">1,30,000+</option>
+                  <option value="deciding">
+                    I'm still deciding on a budget
+                  </option>
+                </select>
+              </div>
+
+              <div class="project-timeline">
+                <select name="timeline" id="project-timeline" required>
+                  <option value="" disabled selected hidden>
+                    When is your project timeline?
+                  </option>
+                  <option value="asap">ASAP (Urgent need)</option>
+                  <option value="1-3">1-3 months</option>
+                  <option value="3-6">3-6 months</option>
+                  <option value="6+">6+ Months / Long-term partner</option>
+                  <option value="exploring">Just exploring</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="project-related-optional-detail">
+              <textarea
+                name="project_details"
+                placeholder="Other Project Details (Optional)"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="book-consultation-form-button">
+            <input type="submit" value="Book My Consultation" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="consultation-booking-form-mobile">
+      <div class="form-container">
+        <form method="POST" action="{% url 'book_consultation' %}">
+          {% csrf_token %}
+
+          <div class="cunsultation-form-heading">
+            <h2>Book Cunsultation Now</h2>
+            <button id="mobile-consultation-booking-form-close-btn">X</button>
+          </div>
+
+          <div class="personal-details-mobile">
+            <input type="text" name="name" placeholder="Full Name" required />
+
+            <input
+              type="email"
+              name="business-email-mobile"
+              id="business-email-mobile"
+              placeholder="Business Email"
+              required
+            />
+
+            <input
+              type="number"
+              name="phone-number"
+              id="phone-number"
+              placeholder="Phone number"
+              required
+            />
+
+            <!-- FIX 1: add name -->
+            <input
+              type="text"
+              name="company_name"
+              placeholder="Company Name (Optional)"
+            />
+
+            <input
+              type="url"
+              name="website-url"
+              id="website-url"
+              placeholder="Company Website (Optional)"
+            />
+          </div>
+
+          <div class="project-details-and-budget">
+            <div class="project-type-mobile">
+              <p><b>I'm interested in the following service(s)</b></p>
+
+              <!-- FIX 2: ONLY name changed -->
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="web-devlopment-mobile"
+                value="web"
+                hidden
+              />
+              <label for="web-devlopment-mobile">
+                Web Development (End-to-End)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="python-scripts-mobile"
+                value="python"
+                hidden
+              />
+              <label for="python-scripts-mobile">
+                Python Scripts / Workflow Automation
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="ai-service-mobile"
+                value="ai"
+                hidden
+              />
+              <label for="ai-service-mobile">
+                AI Integration (Chatbots, Generative Media)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="social-media-automation-mobile"
+                value="social"
+                hidden
+              />
+              <label for="social-media-automation-mobile">
+                Social Media Automation (Facebook, WhatsApp)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="tally-automation-mobile"
+                value="tally"
+                hidden
+              />
+              <label for="tally-automation-mobile">
+                Tally Integration / Accounting Automation
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="undecided-mobile"
+                value="undecided"
+                hidden
+              />
+              <label for="undecided-mobile">Other / Undecided</label>
+            </div>
+
+            <!-- NOTHING BELOW CHANGED -->
+            <div class="project-budget-and-timeline-mobile">
+              <div class="project-budget-details-mobile">
+                <select name="budget" id="project-budget-mobile" required>
+                  <option value="" disabled selected hidden>
+                    What is your estimated project budget?
+                  </option>
+                  <option value="less than 10,000">less than 10,000</option>
+                  <option value="25,000 - 50,000">25,000 - 50,000</option>
+                  <option value="50,000 - 80,000">50,000 - 80,000</option>
+                  <option value="80,000 - 1,30,000">80,000 - 1,30,000</option>
+                  <option value="1,30,000+">1,30,000+</option>
+                  <option value="i'm still deciding">
+                    I'm still deciding on a budget
+                  </option>
+                </select>
+              </div>
+
+              <div class="project-timeline-mobile">
+                <select name="timeline" id="project-timeline-mobile" required>
+                  <option value="" disabled selected hidden>
+                    When is your project timeline?
+                  </option>
+                  <option value="asap">ASAP (Urgent need)</option>
+                  <option value="1-3">1-3 months</option>
+                  <option value="3-6">3-6 months</option>
+                  <option value="6+ months">
+                    6+ Months / Long-term partner
+                  </option>
+                  <option value="just exploring">Just exploring</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="project-related-optional-detail-mobile">
+              <textarea
+                name="project_details"
+                placeholder="Other Project Details (Optional)"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="book-consultation-form-button-mobile">
+            <input type="submit" value="Book My Consultation" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="consultation-booking-form-tablet">
+      <div class="form-container">
+        <form method="POST" action="{% url 'book_consultation' %}">
+          {% csrf_token %}
+
+          <div class="cunsultation-form-heading">
+            <h2>Book Cunsultation Now</h2>
+            <button id="tablet-consultation-booking-form-close-btn">X</button>
+          </div>
+
+          <div class="personal-details-tablet">
+            <input type="text" name="name" placeholder="Full Name" required />
+
+            <input
+              type="email"
+              name="business-email-tablet"
+              id="business-email-tablet"
+              placeholder="Business Email"
+              required
+            />
+
+            <input
+              type="number"
+              name="phone-number"
+              id="phone-number"
+              placeholder="Phone number"
+              required
+            />
+
+            <!-- FIX 1: add name -->
+            <input
+              type="text"
+              name="company_name"
+              placeholder="Company Name (Optional)"
+            />
+
+            <input
+              type="url"
+              name="website-url"
+              id="website-url"
+              placeholder="Company Website (Optional)"
+            />
+          </div>
+
+          <div class="project-details-and-budget">
+            <div class="project-type-tablet">
+              <p><b>I'm interested in the following service(s)</b></p>
+
+              <!-- FIX 2: ONLY name changed -->
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="web-devlopment-tablet"
+                value="web"
+                hidden
+              />
+              <label for="web-devlopment-tablet">
+                Web Development (End-to-End)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="python-scripts-tablet"
+                value="python"
+                hidden
+              />
+              <label for="python-scripts-tablet">
+                Python Scripts / Workflow Automation
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="ai-service-tablet"
+                value="ai"
+                hidden
+              />
+              <label for="ai-service-tablet">
+                AI Integration (Chatbots, Generative Media)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="social-media-automation-tablet"
+                value="social"
+                hidden
+              />
+              <label for="social-media-automation-tablet">
+                Social Media Automation (Facebook, WhatsApp)
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="tally-automation-tablet"
+                value="tally"
+                hidden
+              />
+              <label for="tally-automation-tablet">
+                Tally Integration / Accounting Automation
+              </label>
+
+              <input
+                type="checkbox"
+                name="project_types[]"
+                id="undecided-tablet"
+                value="undecided"
+                hidden
+              />
+              <label for="undecided-tablet">Other / Undecided</label>
+            </div>
+
+            <!-- NOTHING BELOW CHANGED -->
+            <div class="project-budget-and-timeline-tablet">
+              <div class="project-budget-details-tablet">
+                <select name="budget" id="project-budget-tablet" required>
+                  <option value="" disabled selected hidden>
+                    What is your estimated project budget?
+                  </option>
+                  <option value="less than 10,000">less than 10,000</option>
+                  <option value="25,000 - 50,000">25,000 - 50,000</option>
+                  <option value="50,000 - 80,000">50,000 - 80,000</option>
+                  <option value="80,000 - 1,30,000">80,000 - 1,30,000</option>
+                  <option value="1,30,000+">1,30,000+</option>
+                  <option value="i'm still deciding">
+                    I'm still deciding on a budget
+                  </option>
+                </select>
+              </div>
+
+              <div class="project-timeline-tablet">
+                <select name="timeline" id="project-timeline-tablet" required>
+                  <option value="" disabled selected hidden>
+                    When is your project timeline?
+                  </option>
+                  <option value="asap">ASAP (Urgent need)</option>
+                  <option value="1-3">1-3 months</option>
+                  <option value="3-6">3-6 months</option>
+                  <option value="6+ months">
+                    6+ Months / Long-term partner
+                  </option>
+                  <option value="just exploring">Just exploring</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="project-related-optional-detail-tablet">
+              <textarea
+                name="project_details"
+                placeholder="Other Project Details (Optional)"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="book-consultation-form-button-tablet">
+            <input type="submit" value="Book My Consultation" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://www.theboxcoders.com/#localbusiness",
+        "name": "The Box Coders",
+        "url": "https://www.theboxcoders.com/",
+        "logo": "https://www.theboxcoders.com/static/assets/logo.svg",
+        "image": "https://www.theboxcoders.com/static/assets/og-card.jpg",
+        "description": "The Box Coders is a Delhi-based software development and AI automation company offering custom web development, Python automation, AI integration, WhatsApp, Instagram, Facebook, and Tally automation services for businesses in Delhi and across India.",
+
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Delhi",
+          "addressRegion": "DL",
+          "addressCountry": "IN"
+        },
+
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Delhi"
+          },
+          {
+            "@type": "Country",
+            "name": "India"
+          }
+        ],
+
+        "keywords": [
+          "software development company in Delhi",
+          "AI automation company in Delhi",
+          "web development company in Delhi",
+          "Python automation services Delhi",
+          "WhatsApp automation Delhi",
+          "Tally automation services Delhi"
+        ],
+
+        "sameAs": [
+          "https://www.twitter.com/Theboxcoders",
+          "https://www.linkedin.com/company/Theboxcoders"
+        ]
+      }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="{% static 'scripts/script.js' %}"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 100,
+        duration: 1000,
+      });
+    </script>
+
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>

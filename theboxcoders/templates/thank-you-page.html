@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% block content %}
+    <div style="max-width: 600px; margin: 80px auto; text-align: center; height: 100vh;">
+      {% if messages %} {% for message in messages %}
+      <h2 style="color: #2e7d32">{{ message }}</h2>
+      {% endfor %} {% else %}
+      <h2>Thank you! Your inquiry has been submitted.</h2>
+      {% endif %}
+
+      <p style="margin-top: 15px">Our team will contact you within 24 hours.</p>
+
+      <a href="/" class="btn btn-primary" style="margin-top: 30px">
+        Back to Home
+      </a>
+    </div>
+    {% endblock %}
+    {% include "footer.html" %}
+  </body>
+</html>

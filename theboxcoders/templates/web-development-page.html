@@ -1,0 +1,759 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>
+      Web Development & Web Services in Delhi, India | The Box Coders
+    </title>
+    <meta
+      name="description"
+      content="We develop high-performance websites, landing pages, business portals, and custom web applications for companies in Delhi and across India. Our services include responsive design, SEO-optimized builds, API integrations, automation, and full technical maintenance"
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Web Development & Web Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      property="og:description"
+      content="We develop high-performance websites, landing pages, business portals, and custom web applications for companies in Delhi and across India. Our services include responsive design, SEO-optimized builds, API integrations, automation, and full technical maintenance"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Web Development & Web Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      name="twitter:description"
+      content="We develop high-performance websites, landing pages, business portals, and custom web applications for companies in Delhi and across India. Our services include responsive design, SEO-optimized builds, API integrations, automation, and full technical maintenance"
+    />
+    <meta name="twitter:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- Keywords (Google ignores meta keywords, but helps in minor engines) -->
+    <meta
+      name="keywords"
+      content="web development company in delhi, website development delhi, custom website development india, web app development delhi, automation development delhi, crm development india, ecommerce website delhi"
+    />
+
+    <!-- Geo SEO -->
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="Delhi" />
+    <meta name="geo.position" content="28.6139;77.2090" />
+    <meta name="ICBM" content="28.6139, 77.2090" />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon-icons/logo-16.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon-icons/logo-32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="{% static 'favicon-icons/logo-48.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="{% static 'favicon-icons/logo-64.png' %}"
+    />
+
+    <!-- High-Resolution for Chrome / Android -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{% static 'favicon-icons/logo-192.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="{% static 'favicon-icons/logo-256.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="{% static 'favicon-icons/logo-512.png' %}"
+    />
+
+    <!-- Apple Touch Icons (iOS / iPadOS) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{% static 'favicon-icons/logo-120.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="{% static 'favicon-icons/logo-152.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="{% static 'favicon-icons/logo-167.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicon-icons/logo-180.png' %}"
+    />
+
+    <!-- Fallback ICO (for legacy Windows & old browsers) -->
+    <link
+      rel="icon"
+      href="{% static 'favicon-icons/theboxcoderslogo.ico' %}"
+      sizes="any"
+    />
+
+    <!-- Safari Pinned Tab -->
+    <link
+      rel="mask-icon"
+      href="{% static 'favicon-icons/logo.svg' %}"
+      color="#000000"
+    />
+
+    <!-- Windows Tile -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="{% static 'favicon-icons/logo-144.png' %}"
+    />
+
+    <!-- Manifest (For PWA, Android Home Screen) -->
+    <link rel="manifest" href="{% static 'favicon-icons/site.webmanifest' %}" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="{% static 'css/web-development-page.css' %}" />
+  </head>
+
+  <body>
+    {% include 'header.html' %} {% include 'mobile-menu.html' %}
+    <div class="main-container">
+      <div class="wrap">
+        <section class="hero">
+          <div class="hero-left">
+            <h1 data-aos="fade-up">
+              High-performance web solutions built for serious businesses
+            </h1>
+            <p data-aos="fade-down">
+              Trust us to save you time and money by building the right solution
+              once. When you partner with us, you are making a strategic
+              investment in a high-performance platform that is designed to
+              handle your growth, secure your data, and turn more visitors into
+              verified clients. Ready to stop guessing and start scaling?
+            </p>
+            <button
+              href="#pricing"
+              class="btn btn-primary"
+              id="start-project-btn"
+              data-aos="zoom-in"
+            >
+              Start Project
+            </button>
+          </div>
+          <div class="hero-right">
+            <div class="device" data-aos="zoom-in"></div>
+          </div>
+        </section>
+
+        <section id="services" class="services">
+          <div class="card" data-aos="fade-up">
+            <div class="icon">💻</div>
+            <h3>Custom Website Development</h3>
+            <p>
+              Corporate sites, landing pages, product pages, blogs, SEO-ready
+              web builds.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🛒</div>
+            <h3>E-commerce Development</h3>
+            <p>
+              Custom stores, Shopify, WooCommerce, payment gateways, inventory
+              systems.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">⚙️</div>
+            <h3>Web Applications</h3>
+            <p>
+              Full-stack apps in Django, Flask, Node, React — dashboards, SaaS,
+              CRM tools.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🔐</div>
+            <h3>Authentication Systems</h3>
+            <p>
+              User login, JWT, OAuth, role-based access control, API key
+              systems.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🤖</div>
+            <h3>Automation & Bots</h3>
+            <p>
+              Marketing automation, lead scraping bots, WhatsApp/email
+              automation tools.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">📊</div>
+            <h3>Custom CRM Solutions</h3>
+            <p>
+              Sales pipeline, tasks, clients management, analytics dashboards.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🔌</div>
+            <h3>API Development</h3>
+            <p>
+              REST APIs, integrations, secure backend pipelines, 3rd-party
+              connections.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">⚡</div>
+            <h3>Performance Optimization</h3>
+            <p>
+              Speed optimization, Core Web Vitals improvements, CDN & caching
+              systems.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">📱</div>
+            <h3>Mobile App Development</h3>
+            <p>
+              Cross-platform apps using Flutter, React Native, and secure API
+              backends.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🧠</div>
+            <h3>AI Integrations</h3>
+            <p>
+              Chatbots, LLM integrations, AI workflow automation, ML model APIs.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🔍</div>
+            <h3>SEO & Analytics Setup</h3>
+            <p>
+              On-page SEO, schema, analytics, tracking pixels, conversion
+              optimization.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🖥️</div>
+            <h3>UI/UX & Prototyping</h3>
+            <p>
+              Wireframes, Figma prototypes, interactive UI systems, design
+              systems.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🔧</div>
+            <h3>Maintenance & Support</h3>
+            <p>
+              Bug fixes, monitoring, uptime checks, security patching, backups.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🌐</div>
+            <h3>Hosting & Deployment</h3>
+            <p>
+              AWS, VPS, Docker, Kubernetes, CI/CD pipelines, secure environment
+              setup.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">📤</div>
+            <h3>Email Systems & Tracking</h3>
+            <p>
+              Bulk sending tools, email tracking pixels, templates, SMTP setup.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="icon">🏢</div>
+            <h3>Enterprise Solutions</h3>
+            <p>
+              Scalable systems, multi-user applications, custom internal tools.
+            </p>
+          </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+          <div class="price" data-aos="fade-up" data-aos-delay="200">
+            <h4>Starter</h4>
+            <div class="num">₹18,000</div>
+            <ul>
+              <li>Single-page site</li>
+              <li>Basic integrations</li>
+              <li>SEO-ready</li>
+            </ul>
+            <button
+              class="btn btn-primary choose-plan"
+              data-plan="Starter"
+              data-price="₹18,000"
+              data-service="Website Development"
+              style="width: 100%"
+            >
+              Choose
+            </button>
+          </div>
+
+          <div class="price" data-aos="fade-up">
+            <h4>Professional</h4>
+            <div class="num">₹45,000</div>
+            <ul>
+              <li>Multi-page</li>
+              <li>Admin panel</li>
+              <li>Analytics</li>
+            </ul>
+            <button
+              class="btn btn-primary choose-plan"
+              data-plan="Professional"
+              data-price="₹45,000"
+              data-service="Custom Web App"
+              style="width: 100%"
+            >
+              Choose
+            </button>
+          </div>
+
+          <div class="price" data-aos="fade-up" data-aos-delay="200">
+            <h4>Enterprise</h4>
+            <div class="num">Custom</div>
+            <ul>
+              <li>Custom software</li>
+              <li>API ecosystem</li>
+              <li>Priority support</li>
+            </ul>
+            <button
+              class="btn btn-primary choose-plan"
+              data-plan="Enterprise"
+              data-price="Custom Quote"
+              data-service="Enterprise Solutions"
+              style="width: 100%"
+            >
+              Contact
+            </button>
+          </div>
+        </section>
+
+        <section
+          id="inquiry"
+          style="
+            margin: 70px 0;
+            padding: 40px;
+            background: var(--light-card);
+            border: 1px solid #dde3ec;
+            border-radius: var(--radius);
+            box-shadow: 0 6px 26px rgba(0, 0, 0, 0.08);
+          "
+        >
+          <h2
+            style="
+              margin: 0 0 18px;
+              font-size: 28px;
+              font-weight: 800;
+              color: var(--light-text);
+            "
+          >
+            Send Your Project Inquiry
+          </h2>
+          <p
+            style="
+              margin: 0 0 30px;
+              color: #666f7c;
+              font-size: 16px;
+              line-height: 1.5;
+            "
+          >
+            Provide your requirements and our team will reach out within 24
+            hours. We handle professional software, automation, and web-based
+            projects with complete confidentiality and precision.
+          </p>
+
+          <form
+            id="inquiry-form"
+            method="POST"
+            action="{% url 'web_devlopment' %}"
+          >
+            {% csrf_token %}
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <input
+                type="hidden"
+                name="service_page"
+                value="Web Development Services Delhi"
+              />
+              <input type="hidden" name="source_city" value="Delhi" />
+
+              <label style="font-weight: 600; color: #3b4350">Full Name</label>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Enter your full name"
+                style="
+                  padding: 14px;
+                  border-radius: var(--radius);
+                  border: 1px solid #d4dae4;
+                  font-size: 15px;
+                  outline: none;
+                "
+                required
+              />
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <label style="font-weight: 600; color: #3b4350"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                name="email"
+                style="
+                  padding: 14px;
+                  border-radius: var(--radius);
+                  border: 1px solid #d4dae4;
+                  font-size: 15px;
+                  outline: none;
+                "
+                required
+              />
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <label style="font-weight: 600; color: #3b4350"
+                >Phone Number</label
+              >
+              <input
+                type="text"
+                placeholder="Your contact number"
+                name="phone_number"
+                style="
+                  padding: 14px;
+                  border-radius: var(--radius);
+                  border: 1px solid #d4dae4;
+                  font-size: 15px;
+                  outline: none;
+                "
+              />
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <label style="font-weight: 600; color: #3b4350"
+                >Service Type</label
+              >
+              <select
+                style="
+                  padding: 14px;
+                  border-radius: var(--radius);
+                  border: 1px solid #d4dae4;
+                  font-size: 15px;
+                  outline: none;
+                "
+                name="service_type"
+                required
+              >
+                <option value="select service" disabled selected hidden>
+                  Select Service
+                </option>
+                <option value="website-development">Website Development</option>
+                <option value="e-commerce-development">
+                  E-commerce Development
+                </option>
+                <option value="custom-web-app">Custom Web App</option>
+                <option value="authentication-systems">
+                  Authentication Systems
+                </option>
+                <option value="automation-or-bots">Automation / Bots</option>
+                <option value="crm-development">CRM Development</option>
+                <option value="mobile-app">Mobile App</option>
+                <option value="ai-or-ml-integration">
+                  AI / ML Integration
+                </option>
+                <option value="api-development">API Development</option>
+                <option value="other">Other (Specify Below)</option>
+              </select>
+            </div>
+
+            <div
+              style="
+                grid-column: 1 / span 2;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+              "
+            >
+              <label style="font-weight: 600; color: #3b4350"
+                >Project Requirements</label
+              >
+              <textarea
+                placeholder="Describe what you want built. The more details you provide, the better."
+                style="
+                  padding: 14px;
+                  border-radius: var(--radius);
+                  border: 1px solid #d4dae4;
+                  font-size: 15px;
+                  height: 140px;
+                  outline: none;
+                "
+                name="project_requirements"
+                required
+              ></textarea>
+            </div>
+
+            <div style="grid-column: 1 / span 2; text-align: right">
+              <button
+                class="btn btn-primary"
+                style="
+                  padding: 14px 32px;
+                  font-size: 16px;
+                  border-radius: var(--radius);
+                  font-weight: 700;
+                  outline: none;
+                "
+              >
+                Submit Inquiry
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    {% include "footer.html" %}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://www.theboxcoders.com/#localbusiness",
+            "name": "The Box Coders",
+            "url": "https://www.theboxcoders.com/",
+            "logo": "https://www.theboxcoders.com/static/assets/logo.svg",
+            "image": "https://www.theboxcoders.com/static/assets/og-card.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Delhi",
+              "addressRegion": "DL",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.6139,
+              "longitude": 77.209
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Delhi"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/Theboxcoders",
+              "https://www.twitter.com/Theboxcoders"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Sales",
+              "availableLanguage": ["English"],
+              "areaServed": "IN"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.theboxcoders.com/web-development-services#service",
+            "name": "Web Development & Web Services in Delhi",
+            "description": "Professional web development services in Delhi including business websites, custom web applications, e-commerce platforms, automation systems, CRM software, API development, and AI-powered integrations.",
+            "provider": {
+              "@id": "https://www.theboxcoders.com/#localbusiness"
+            },
+            "serviceType": [
+              "Web Development",
+              "Custom Website Development",
+              "Web Application Development",
+              "E-commerce Development",
+              "Automation & Bot Development",
+              "CRM Development",
+              "API Development",
+              "AI Integration"
+            ],
+            "areaServed": {
+              "@type": "City",
+              "name": "Delhi",
+              "addressCountry": "IN"
+            },
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceLocation": {
+                "@type": "Place",
+                "name": "Delhi, India"
+              },
+              "availableLanguage": ["English"]
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Web Development Pricing Plans",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Starter Web Development",
+                  "price": "18000",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Professional Web Development",
+                  "price": "45000",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Enterprise Web Development",
+                  "price": "0",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/PreOrder",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "0",
+                    "priceCurrency": "INR",
+                    "description": "Custom enterprise quote based on scope"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Force reflow — IMPORTANT
+        document.querySelectorAll(".card").forEach((card) => {
+          // read offsetHeight to trigger reflow
+          card.offsetHeight;
+        });
+
+        // NOW init AOS
+        AOS.init({
+          duration: 1200,
+          once: false,
+        });
+
+        // And refresh after initial load
+        setTimeout(() => AOS.refreshHard(), 300);
+      });
+    </script>
+
+    <script>
+      document
+        .querySelector("#start-project-btn")
+        .addEventListener("click", () => {
+          const targetSection = document.querySelector(
+            ".section pricing-section",
+          );
+
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+            });
+          } else {
+            console.error("Target element #pricing not found.");
+          }
+        });
+      document.querySelectorAll(".choose-plan").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const plan = btn.dataset.plan;
+          const price = btn.dataset.price;
+
+          const textarea = document.querySelector("#inquiry textarea");
+          const allCards = document.querySelectorAll(".price");
+
+          // Remove previous highlights + badges
+          allCards.forEach((card) => {
+            card.classList.remove("selected");
+            const badge = card.querySelector(".selected-badge");
+            if (badge) badge.remove();
+          });
+
+          // Highlight clicked card
+          const selectedCard = btn.closest(".price");
+          selectedCard.classList.add("selected");
+
+          // Add badge
+          const badge = document.createElement("div");
+          badge.className = "selected-badge";
+          badge.textContent = "Selected";
+          selectedCard.appendChild(badge);
+
+          // Update textarea message template
+          if (textarea) {
+            textarea.value =
+              `Package Selected: ${plan} (${price})\n\n` +
+              `Please outline your project scope and specific requirements below:\n`;
+          }
+
+          // Smooth scroll to form
+          document.querySelector("#inquiry").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

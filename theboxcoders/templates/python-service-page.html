@@ -1,0 +1,584 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Python Automation Services in Delhi, India | The Box Coders</title>
+    <meta
+      name="description"
+      content="We develop custom Python scripts and automation tools for businesses in Delhi and across India. Our Python services include web scraping, data automation, workflow automation, API integrations, report generation, and backend task automation. Fast, reliable, and fully tailored to your processes."
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Python Automation Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      property="og:description"
+      content="We develop custom Python scripts and automation tools for businesses in Delhi and across India. Our Python services include web scraping, data automation, workflow automation, API integrations, report generation, and backend task automation. Fast, reliable, and fully tailored to your processes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Python Automation Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      name="twitter:description"
+      content="We develop custom Python scripts and automation tools for businesses in Delhi and across India. Our Python services include web scraping, data automation, workflow automation, API integrations, report generation, and backend task automation. Fast, reliable, and fully tailored to your processes.  "
+    />
+    <meta name="twitter:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- Keywords (for secondary benefit) -->
+    <meta
+      name="keywords"
+      content="python development company in delhi, python developer india, python automation, python api development, django development delhi, ai ml development delhi, data engineering india, hire python developer delhi"
+    />
+
+    <!-- Geo Signals -->
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="Delhi" />
+    <meta name="geo.position" content="28.6139;77.2090" />
+    <meta name="ICBM" content="28.6139, 77.2090" />
+
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon-icons/logo-16.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon-icons/logo-32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="{% static 'favicon-icons/logo-48.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="{% static 'favicon-icons/logo-64.png' %}"
+    />
+
+    <!-- High-Resolution for Chrome / Android -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{% static 'favicon-icons/logo-192.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="{% static 'favicon-icons/logo-256.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="{% static 'favicon-icons/logo-512.png' %}"
+    />
+
+    <!-- Apple Touch Icons (iOS / iPadOS) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{% static 'favicon-icons/logo-120.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="{% static 'favicon-icons/logo-152.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="{% static 'favicon-icons/logo-167.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicon-icons/logo-180.png' %}"
+    />
+
+    <!-- Fallback ICO (for legacy Windows & old browsers) -->
+    <link
+      rel="icon"
+      href="{% static 'favicon-icons/theboxcoderslogo.ico' %}"
+      sizes="any"
+    />
+
+    <!-- Safari Pinned Tab -->
+    <link
+      rel="mask-icon"
+      href="{% static 'favicon-icons/logo.svg' %}"
+      color="#000000"
+    />
+
+    <!-- Windows Tile -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="{% static 'favicon-icons/logo-144.png' %}"
+    />
+
+    <!-- Manifest (For PWA, Android Home Screen) -->
+    <link rel="manifest" href="{% static 'favicon-icons/site.webmanifest' %}" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="{% static 'css/python-service-page.css' %}" />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    {% include "header.html" %} {% include "mobile-menu.html" %}
+    <div class="wrap">
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <h1 data-aos="fade-up">
+            Custom Python Scripts<br />Built For Automation & Power
+          </h1>
+          <p data-aos="fade-down">
+            We build high-performance Python scripts designed to automate
+            workflows, process data, scrape information, integrate APIs, and
+            solve complex business problems with clean, maintainable code.
+          </p>
+          <button class="btn" id="request-script" data-aos="zoom-in">
+            Request a Script →
+          </button>
+        </div>
+        <div class="hero-img" data-aos="zoom-in"></div>
+      </section>
+
+      <!-- WHAT WE BUILD -->
+      <section class="section">
+        <h2>What Type of Python Scripts We Build</h2>
+        <p>
+          From small utilities to full enterprise automation, we deliver
+          production-grade Python tools tailored to your exact use-case.
+        </p>
+
+        <div class="services-grid">
+          <div class="card" data-aos="fade-up">
+            <h3>Automation Tools</h3>
+            <p>
+              Excel automation, repetitive task automation, folder & file
+              automation, workflow triggers.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Web Scraping Scripts</h3>
+            <p>
+              Scrapers for ecommerce, pricing, competitors, social media &
+              real-time data mining.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>API Integration Scripts</h3>
+            <p>
+              REST API consumption, data syncing, authentication systems,
+              email/SMS automation.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Data Processing Scripts</h3>
+            <p>
+              Cleaning, structuring, merging, exporting data using Pandas, NumPy
+              & more.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>AI / ML Based Scripts</h3>
+            <p>
+              LLM integrations, prediction scripts, classification & ML pipeline
+              automation.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Custom Business Logic</h3>
+            <p>
+              Billing logic, CRM integrations, accounting automation, tally &
+              ERP scripting.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="section">
+        <h2>Why Choose Our Python Script Service?</h2>
+        <div
+          class="services-grid"
+          style="grid-template-columns: repeat(2, 1fr)"
+        >
+          <div class="card" data-aos="fade-up">
+            <h3>Clean & Understandable Code</h3>
+            <p>Readable, modular and industry-standard Python.</p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Fast Delivery</h3>
+            <p>We ship scripts within days — not weeks.</p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Secure & Reliable</h3>
+            <p>We follow best practices to avoid bugs & vulnerabilities.</p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Lifetime Support*</h3>
+            <p>Minor fixes & updates included without extra cost.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING SECTION -->
+      <section class="section pricing-section">
+        <h2>Python Script Development Pricing</h2>
+        <p>
+          Select a package and we’ll pre-fill the inquiry form with your chosen
+          option.
+        </p>
+
+        <div class="pricing-grid">
+          <!-- Starter -->
+          <div class="price-card" data-aos="fade-up">
+            <h3>Starter</h3>
+            <p class="price">₹4,999</p>
+            <ul>
+              <li>1 Simple Script</li>
+              <li>Basic Automation / Scraping</li>
+              <li>3-Day Delivery</li>
+              <li>Email Support</li>
+            </ul>
+            <button class="choose-plan" data-plan="Starter" data-price="₹4,999">
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Professional -->
+          <div class="price-card" data-aos="fade-up">
+            <h3>Professional</h3>
+            <p class="price">₹14,999</p>
+            <ul>
+              <li>Advanced Automation / Scraping</li>
+              <li>API + Database Integration</li>
+              <li>Optimized & Modular Code</li>
+              <li>Fast Delivery + Priority Support</li>
+            </ul>
+            <button
+              class="choose-plan"
+              data-plan="Professional"
+              data-price="₹14,999"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="price-card" data-aos="fade-up">
+            <h3>Enterprise</h3>
+            <p class="price">Custom Quote</p>
+            <ul>
+              <li>Large-Scale Automation</li>
+              <li>AI/ML Pipelines, Custom Dashboards</li>
+              <li>Multi-System Integration</li>
+              <li>Dedicated Support + NDA</li>
+            </ul>
+            <button
+              class="choose-plan"
+              data-plan="Enterprise"
+              data-price="Custom Quote"
+            >
+              Choose Plan
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- INQUIRY FORM -->
+      <section class="section">
+        <h2>Get Your Python Script Developed</h2>
+        <div class="form-box">
+          <form
+            class="form-grid"
+            method="POST"
+            action="{% url 'python_services' %}"
+          >
+            {% csrf_token %}
+
+            <input
+              type="hidden"
+              name="service_page"
+              value="Python Automation Services Delhi"
+            />
+            <input type="hidden" name="source_city" value="Delhi" />
+
+            <div>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="phone_number"
+                placeholder="Phone Number"
+              />
+            </div>
+
+            <div>
+              <select name="service_type" required>
+                <option disabled selected hidden>Your Script Type?</option>
+                <option value="automation">Automation Script</option>
+                <option value="scraping">Scraping Script</option>
+                <option value="api">API Integration Script</option>
+                <option value="data">Data Processing Script</option>
+                <option value="ai">AI/ML Script</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div style="grid-column: 1 / span 2">
+              <textarea
+                name="project_requirements"
+                placeholder="Describe your script requirements in detail..."
+                required
+              ></textarea>
+            </div>
+
+            <div style="grid-column: 1 / span 2; text-align: right">
+              <button class="btn">Submit Request</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    {% include "footer.html" %}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://www.theboxcoders.com/#localbusiness",
+            "name": "The Box Coders",
+            "url": "https://www.theboxcoders.com/",
+            "logo": "https://www.theboxcoders.com/static/assets/logo.svg",
+            "image": "https://www.theboxcoders.com/static/assets/og-card.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Delhi",
+              "addressRegion": "DL",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.6139,
+              "longitude": 77.209
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Delhi",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Sales",
+              "availableLanguage": ["English"],
+              "areaServed": "IN"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/Theboxcoders",
+              "https://www.twitter.com/Theboxcoders"
+            ]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.theboxcoders.com/python-automation-services#service",
+            "name": "Python Automation Services in Delhi",
+            "description": "Professional Python automation services including custom Python scripts, workflow automation, web scraping, API integrations, data processing, reporting, and AI/ML-based automation for businesses in Delhi and across India.",
+            "provider": {
+              "@id": "https://www.theboxcoders.com/#localbusiness"
+            },
+            "serviceType": [
+              "Python Automation",
+              "Custom Python Scripts",
+              "Web Scraping Services",
+              "API Integration with Python",
+              "Data Processing & Reporting",
+              "AI & Machine Learning Automation"
+            ],
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Delhi",
+                "addressCountry": "IN"
+              },
+              {
+                "@type": "Country",
+                "name": "India"
+              }
+            ],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceLocation": {
+                "@type": "Place",
+                "name": "Delhi, India"
+              },
+              "availableLanguage": ["English"]
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Python Automation Pricing Plans",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Starter Python Automation",
+                  "price": "4999",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Basic Python Automation or Scraping Script"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Professional Python Automation",
+                  "price": "14999",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Advanced Python Automation with API or Database Integration"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Enterprise Python Automation",
+                  "price": "0",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/PreOrder",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "0",
+                    "priceCurrency": "INR",
+                    "description": "Custom enterprise-grade automation including AI/ML pipelines, large-scale scraping, and multi-system integrations"
+                  },
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Enterprise Python Automation Solutions"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 1200, // Duration of animation (ms)
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .querySelector("#request-script")
+        .addEventListener("click", () => {
+          const targetSection = document.querySelector(".pricing-section");
+
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+            });
+          } else {
+            console.error("Target element #pricing not found.");
+          }
+        });
+      document.querySelectorAll(".choose-plan").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const plan = btn.dataset.plan;
+          const price = btn.dataset.price;
+
+          const textarea = document.querySelector("textarea");
+          const allCards = document.querySelectorAll(".price-card");
+
+          // Remove previous highlights
+          allCards.forEach((card) => {
+            card.classList.remove("selected");
+            const badge = card.querySelector(".selected-badge");
+            if (badge) badge.remove();
+          });
+
+          // Highlight active card
+          const selectedCard = btn.closest(".price-card");
+          selectedCard.classList.add("selected");
+
+          // Badge
+          const badge = document.createElement("div");
+          badge.className = "selected-badge";
+          badge.textContent = "Selected";
+          selectedCard.appendChild(badge);
+
+          // Update inquiry textarea
+          if (textarea) {
+            textarea.value =
+              `Package Selected: ${plan} (${price})\n\n` +
+              `Please outline your project scope and specific requirements below:\n`;
+          }
+
+          // Scroll to form
+          document.querySelector(".form-box").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

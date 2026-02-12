@@ -1,0 +1,537 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <meta
+      name="description"
+      content="We build custom Tally automation solutions for businesses in Delhi and across India. Our services include automated data entry, invoice processing, ledger updates, report generation, Tally–CRM integration, WhatsApp/Tally sync, and complete workflow automation to reduce manual effort and improve accuracy."
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Tally Automation Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      property="og:description"
+      content="We build custom Tally automation solutions for businesses in Delhi and across India. Our services include automated data entry, invoice processing, ledger updates, report generation, Tally–CRM integration, WhatsApp/Tally sync, and complete workflow automation to reduce manual effort and improve accuracy."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{% static 'assets/og-card.jpg' %}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Tally Automation Services in Delhi, India | The Box Coders"
+    />
+    <meta
+      name="twitter:description"
+      content="We build custom Tally automation solutions for businesses in Delhi and across India. Our services include automated data entry, invoice processing, ledger updates, report generation, Tally–CRM integration, WhatsApp/Tally sync, and complete workflow automation to reduce manual effort and improve accuracy."
+    />
+    <meta name="twitter:image" content="{% static 'assets/og-card.jpg' %}" />
+
+    <!-- Geo SEO -->
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="Delhi" />
+    <meta name="geo.position" content="28.6139;77.2090" />
+    <meta name="ICBM" content="28.6139, 77.2090" />
+
+    <!-- High Intent Keywords -->
+    <meta
+      name="keywords"
+      content="tally automation services, tally prime automation, tally erp9 automation, tally api integration, tally crm sync, tally data entry automation, multi branch tally sync, custom tdl development, tally invoice automation"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon-icons/logo-16.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon-icons/logo-32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="{% static 'favicon-icons/logo-48.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="{% static 'favicon-icons/logo-64.png' %}"
+    />
+
+    <!-- High-Resolution for Chrome / Android -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{% static 'favicon-icons/logo-192.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="{% static 'favicon-icons/logo-256.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="{% static 'favicon-icons/logo-512.png' %}"
+    />
+
+    <!-- Apple Touch Icons (iOS / iPadOS) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{% static 'favicon-icons/logo-120.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="{% static 'favicon-icons/logo-152.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="{% static 'favicon-icons/logo-167.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicon-icons/logo-180.png' %}"
+    />
+
+    <!-- Fallback ICO (for legacy Windows & old browsers) -->
+    <link
+      rel="icon"
+      href="{% static 'favicon-icons/theboxcoderslogo.ico' %}"
+      sizes="any"
+    />
+
+    <!-- Safari Pinned Tab -->
+    <link
+      rel="mask-icon"
+      href="{% static 'favicon-icons/logo.svg' %}"
+      color="#000000"
+    />
+
+    <!-- Windows Tile -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="{% static 'favicon-icons/logo-144.png' %}"
+    />
+
+    <!-- Manifest (For PWA, Android Home Screen) -->
+    <link rel="manifest" href="{% static 'favicon-icons/site.webmanifest' %}" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Title -->
+    <title>Tally Automation Services in Delhi, India | The Box Coders</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page Styles -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/tally-automation-page.css' %}"
+    />
+  </head>
+
+  <body>
+    {% include "header.html" %} {% include "mobile-menu.html" %}
+
+    <div class="wrap">
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div>
+          <h1 data-aos="fade-up">Tally Automation Services in Delhi, India</h1>
+          <p data-aos="fade-down">
+            We automate business workflows inside Tally ERP 9 and Tally Prime —
+            including automated data entry, syncing Tally with CRM/ERP/API,
+            automated invoice generation, report automation, multi-branch sync,
+            and custom Tally extensions for Indian businesses.
+          </p>
+          <button
+            class="btn btn-primary"
+            id="tally-automation-btn"
+            data-aos="zoom-in"
+          >
+            Get Tally Automation →
+          </button>
+        </div>
+
+        <div class="hero-img" data-aos="zoom-in"></div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section">
+        <h2>What We Automate in Tally</h2>
+        <p>
+          We build custom Tally automation solutions for SMBs, enterprise teams,
+          CA firms, wholesalers, retailers, manufacturers, and service
+          companies.
+        </p>
+
+        <div class="services-grid">
+          <div class="card" data-aos="fade-up">
+            <h3>Automated Data Entry</h3>
+            <p>
+              Import sales, purchases, ledgers, stock, and payments
+              automatically into Tally.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Tally to CRM / ERP Sync</h3>
+            <p>
+              Sync customers, invoices, stock, payments, and accounts with your
+              CRM or ERP system.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Invoice Automation</h3>
+            <p>
+              Auto-generate invoices, e-invoices (IRN), e-way bills, and send
+              them through email or WhatsApp.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Custom TDL Development</h3>
+            <p>
+              Custom reports, fields, voucher automation, dashboards, and
+              tailor-made TDL modules.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Multi-Branch Sync</h3>
+            <p>
+              Centralize data across branches, warehouses, and departments with
+              automated syncing.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <h3>Automated Reports</h3>
+            <p>
+              Generate daily, weekly, or monthly Tally reports automatically and
+              send them to your team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="section pricing-section">
+        <h2>Tally Automation Pricing</h2>
+
+        <div class="pricing">
+          <div
+            class="plan"
+            data-plan="Basic"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h4>Basic</h4>
+            <div class="price">₹12,000</div>
+            <ul>
+              <li>Basic automation</li>
+              <li>Single workflow</li>
+              <li>Email support</li>
+            </ul>
+            <button class="btn btn-primary choose-plan">Choose Plan</button>
+          </div>
+
+          <div class="plan" data-plan="Professional" data-aos="fade-up">
+            <h4>Professional</h4>
+            <div class="price">₹30,000</div>
+            <ul>
+              <li>Multi-automation</li>
+              <li>CRM / API integration</li>
+              <li>Advanced reporting</li>
+            </ul>
+            <button class="btn btn-primary choose-plan">Choose Plan</button>
+          </div>
+
+          <div
+            class="plan"
+            data-plan="Enterprise"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h4>Enterprise</h4>
+            <div class="price">Custom</div>
+            <ul>
+              <li>Full workflow automation</li>
+              <li>Multi-branch sync</li>
+              <li>Dedicated support</li>
+            </ul>
+            <button class="btn btn-primary choose-plan">Choose Plan</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- INQUIRY FORM -->
+      <section class="section" id="inquiryForm">
+        <h2>Request Tally Automation Setup</h2>
+        <div class="form-box">
+          <form
+            class="form-grid"
+            method="POST"
+            action="{% url 'tally_automation' %}"
+          >
+            {% csrf_token %}
+
+            <input
+              type="hidden"
+              name="service_page"
+              value="Tally Automation Services India"
+            />
+            <input type="hidden" name="source_city" value="India" />
+
+            <div>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="phone_number"
+                placeholder="Phone Number (optional)"
+              />
+            </div>
+
+            <div>
+              <select id="serviceSelect" name="service_type" required>
+                <option disabled selected hidden>Select Tally Service -</option>
+                <option value="Custom">Tally Automation — Custom</option>
+                <option value="Basic">Basic</option>
+                <option value="Professional">Professional</option>
+                <option value="Enterprise">Enterprise</option>
+              </select>
+            </div>
+
+            <div style="grid-column: 1 / span 2">
+              <textarea
+                name="project_requirements"
+                placeholder="Describe your Tally workflow or automation requirement..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-actions" style="grid-column: 1 / span 2">
+              <button class="btn btn-primary" type="submit">
+                Submit Inquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    {% include "footer.html" %}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://www.theboxcoders.com/tally-automation-services#service",
+        "name": "Tally Automation Services",
+        "description": "Custom Tally automation solutions for Indian businesses including automated data entry, invoice processing, ledger updates, reporting, CRM and API integrations, WhatsApp–Tally sync, multi-branch automation, and custom TDL development for Tally ERP 9 and Tally Prime.",
+        "serviceType": [
+          "Tally Automation",
+          "Tally ERP Automation",
+          "Tally Prime Automation",
+          "Tally CRM Integration",
+          "Tally Invoice Automation",
+          "Custom TDL Development"
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Delhi",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "Country",
+            "name": "India"
+          }
+        ],
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://www.theboxcoders.com/#localbusiness",
+          "name": "The Box Coders",
+          "url": "https://www.theboxcoders.com/",
+          "logo": "https://www.theboxcoders.com/static/assets/logo.svg",
+          "image": "https://www.theboxcoders.com/static/assets/og-card.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Delhi",
+            "addressRegion": "DL",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 28.6139,
+            "longitude": 77.209
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/theboxcoders",
+            "https://twitter.com/theboxcoders"
+          ]
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tally Automation Pricing Plans",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Basic Tally Automation",
+              "price": "12000",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Professional Tally Automation",
+              "price": "30000",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Enterprise Tally Automation",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/PreOrder",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "0",
+                "priceCurrency": "INR",
+                "description": "Custom pricing based on workflow complexity and integration scope"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <script>
+      // Initialize AOS when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 1200, // Duration of animation (ms)
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .querySelector("#tally-automation-btn")
+        .addEventListener("click", () => {
+          // 1. Select the element you want to scroll TO
+          const targetSection = document.querySelector(".pricing-section");
+
+          // 2. Call the method ON that element
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+              // Note: 'target' is NOT a valid property here
+            });
+          } else {
+            console.error("Target element #pricing not found.");
+          }
+        });
+      const cards = document.querySelectorAll(".plan");
+      const dropdown = document.getElementById("serviceSelect");
+      const textarea = document.querySelector("textarea");
+      const formSection = document.getElementById("inquiryForm");
+
+      // Add badge (pure logic — no styling here)
+      function addBadge(card) {
+        if (card.querySelector(".selected-badge")) return;
+
+        const badge = document.createElement("div");
+        badge.className = "selected-badge";
+        badge.textContent = "Selected";
+        card.appendChild(badge);
+      }
+
+      // Handle plan selection
+      document.querySelectorAll(".choose-plan").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const card = e.target.closest(".plan");
+          const plan = card.dataset.plan;
+
+          // Remove previous state
+          cards.forEach((c) => {
+            c.classList.remove("selected");
+            const b = c.querySelector(".selected-badge");
+            if (b) b.remove();
+          });
+
+          // Apply selected card highlight + badge
+          card.classList.add("selected");
+          addBadge(card);
+
+          // Sync dropdown
+          dropdown.value = plan;
+
+          // Pre-fill textarea
+          textarea.value = `Package Selected: ${plan}\n\nPlease outline your project scope and specific requirements below:`;
+
+          // Scroll to form
+          formSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // “Get Tally Automation” CTA scroll
+      document.getElementById("openForm").addEventListener("click", () => {
+        formSection.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

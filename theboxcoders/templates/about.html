@@ -1,0 +1,401 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>About The Box Coders | Software Development, Automation & AI Solutions</title>
+
+    <meta
+      name="description"
+      content="Learn about The Box Coders — a software development and automation company in India specializing in custom software, Python automation, AI integration, CRM systems, and business process automation."
+    />
+      
+    <!-- Open Graph -->
+    <meta property="og:title" content="About The Box Coders | Who We Are & What We Do" />
+    <meta
+      property="og:description"
+      content="Discover The Box Coders — an Indian software and automation company delivering custom software, AI integrations, Python automation, CRM systems, and business solutions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.theboxcoders.com/about" />
+    <meta property="og:image" content="{% static 'assets/og-card.jpg'%}" />
+    <meta property="og:site_name" content="The Box Coders" />
+      
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About The Box Coders" />
+    <meta
+      name="twitter:description"
+      content="Learn about The Box Coders — a software development and automation company in India focused on AI, automation, and custom software."
+    />
+    <meta name="twitter:image" content="{% static 'assets/og-card.jpg' %}" />
+
+
+    <!-- Keywords -->
+    <meta 
+      name="keywords" 
+      content="about the box coders, software development company india, automation company india, ai integration company, crm development india, web development agency, tally automation experts, the box coders team"
+    />
+
+    <!-- Local SEO -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <meta name="geo.position" content="20.5937;78.9629" />
+    <meta name="ICBM" content="20.5937, 78.9629" />
+
+    <!-- Standard Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-icons/logo-16.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-icons/logo-32.png' %}">
+    <link rel="icon" type="image/png" sizes="48x48" href="{% static 'favicon-icons/logo-48.png' %}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{% static 'favicon-icons/logo-64.png' %}">
+
+    <!-- High-Resolution for Chrome / Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'favicon-icons/logo-192.png' %}">
+    <link rel="icon" type="image/png" sizes="256x256" href="{% static 'favicon-icons/logo-256.png' %}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{% static 'favicon-icons/logo-512.png' %}">
+
+    <!-- Apple Touch Icons (iOS / iPadOS) -->
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'favicon-icons/logo-120.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'favicon-icons/logo-152.png' %}">
+    <link rel="apple-touch-icon" sizes="167x167" href="{% static 'favicon-icons/logo-167.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon-icons/logo-180.png' %}">
+
+    <!-- Fallback ICO (for legacy Windows & old browsers) -->
+    <link rel="icon" href="{% static 'favicon-icons/theboxcoderslogo.ico' %}" sizes="any">
+
+    <!-- Safari Pinned Tab -->
+    <link rel="mask-icon" href="{% static 'favicon-icons/logo.svg' %}" color="#000000">
+
+    <!-- Windows Tile -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'favicon-icons/logo-144.png' %}">
+
+    <!-- Manifest (For PWA, Android Home Screen) -->
+    <link rel="manifest" href="{% static 'favicon-icons/site.webmanifest' %}">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="desktop-header">
+        <div class="company-name">              
+          <img src="{% static 'assets/logo.svg' %}" alt="The Box Coders team building custom software and automation solutions">
+          TheBoxCoders</div>
+        <div class="desktop-menu">
+          <a href="{% url 'index' %}" class="menu-item">Home</a >
+          <a href="{% url 'about' %}" class="menu-item active-page">About</a >
+          <a href="{% url 'contact' %}" class="menu-item">Contact</a >
+        </div>
+        <div class="contact-number">
+          {% for contact in contacts %}
+            <a href="tel:{{contact.phone_number}}">
+              {{contact.phone_number}}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="mobile-header">
+        <div class="the-box-coders-name-and-logo">
+          <img src="{% static 'assets/logo.svg' %}" alt="The Box Coders team building custom software and automation solutions">
+          <span>The Box Coders</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu-container">
+        <a href="{% url 'index' %}" class="menu-item">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M15 25.0997C15 25.0997 24 25.0997 24 25.0997L24 11.567L13.5 3.4003L3 11.567L3 25.0997L12 25.0997L12 16.0997L15 16.0997C15 16.0997 15 25.0997 15 25.0997ZM27 26.5997C27 27.4282 26.3284 28.0997 25.5 28.0997C25.5 28.0997 1.5 28.0997 1.5 28.0997C0.67158 28.0997 0 27.4282 0 26.5997C0 26.5997 0 10.8333 0 10.8333C0 10.3705 0.213705 9.93349 0.57909 9.64931C0.57909 9.64931 12.5791 0.315968 12.5791 0.315968C13.1208 -0.105322 13.8792 -0.105322 14.4209 0.315968C14.4209 0.315968 26.4208 9.64931 26.4208 9.64931C26.7863 9.93349 27 10.3705 27 10.8333C27 10.8333 27 26.5997 27 26.5997Z" fill="#808080" transform="translate(4.5 3.4)" />
+            </g>
+          </svg>
+        </a >
+      
+        <a href="{% url 'about' %}" class="menu-item active-page-mobile">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M0 1.5C0 0.67158 0.67158 0 1.5 0C1.5 0 28.5 0 28.5 0C29.3284 0 30 0.67158 30 1.5C30 1.5 30 25.5 30 25.5C30 26.3284 29.3284 27 28.5 27C28.5 27 1.5 27 1.5 27C0.67158 27 0 26.3284 0 25.5C0 25.5 0 1.5 0 1.5ZM3 3C3 3 3 24 3 24L27 24L27 3C27 3 3 3 3 3ZM6 6C6 6 15 6 15 6L15 15L6 15C6 15 6 6 6 6ZM9 9C9 9 9 12 9 12L12 12L12 9C12 9 9 9 9 9ZM18 9C18 9 24 9 24 9L24 6L18 6C18 6 18 9 18 9ZM24 15C24 15 18 15 18 15L18 12L24 12C24 12 24 15 24 15ZM6 18C6 18 6 21 6 21L24 21L24 18C24 18 6 18 6 18Z" fill="#808080" transform="translate(3 4.5)" />
+            </g>
+          </svg>
+        </a >
+      
+        <a href="{% url 'contact' %}" class="menu-item">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M4.5 30C2.01473 30 0 27.9854 0 25.5C0 25.5 0 4.5 0 4.5C0 2.01472 2.01473 0 4.5 0C4.5 0 25.5 0 25.5 0C26.3284 0 27 0.67158 27 1.5C27 1.5 27 28.5 27 28.5C27 29.3284 26.3284 30 25.5 30C25.5 30 4.5 30 4.5 30ZM24 27C24 27 24 24 24 24C24 24 4.5 24 4.5 24C3.67158 24 3 24.6716 3 25.5C3 26.3284 3.67158 27 4.5 27C4.5 27 24 27 24 27ZM3 21.2561C3.46917 21.0903 3.97404 21 4.5 21C4.5 21 24 21 24 21L24 3C24 3 4.5 3 4.5 3C3.67158 3 3 3.67158 3 4.5C3 4.5 3 21.2561 3 21.2561ZM13.5 12C11.8431 12 10.5 10.6569 10.5 9C10.5 7.34315 11.8431 6 13.5 6C15.1569 6 16.5 7.34315 16.5 9C16.5 10.6569 15.1569 12 13.5 12ZM9 18C9 15.5146 11.0146 13.5 13.5 13.5C15.9854 13.5 18 15.5146 18 18C18 18 9 18 9 18Z" fill="#808080" transform="translate(4.5 3)" />
+            </g>
+          </svg>
+        </a >
+      </div>
+    </div>
+
+
+    {% include "contact-btn.html" %}
+
+    <div class="main-container">
+      <div class="about-page">
+        <div class="main-about-container">
+          <div class="robot-section">
+            <img src="{% static 'assets/robot.webp' %}" alt="The Box Coders team building custom software and automation solutions" id="robot-image">
+            <section >
+              <h1>Building Digital Futures, <br> One Code Box at a Time.</h1>
+              <p>We are The Box Coders—a team of engineers and innovators dedicated to simplifying business operations through powerful, custom-built software solutions.</p>
+            </section>
+          </div>
+
+          <div class="first-box">
+            <section data-aos="fade-up">
+              <h2>Driven by Problem Solving</h2>
+              <p id="first-para">Our journey started with a simple observation: businesses worldwide waste countless hours and resources on repetitive, manual tasks. We set out to change that reality. We don't just write code; we partner with you to identify and solve the core inefficiencies holding your growth back. We build digital tools that help businesses Grow by Solving Real World Problems. From Custom software development to AI integration, our philosophy is rooted in engineering solutions that bring efficiency, accuracy, and speed to your workflow.</p>
+            </section>
+            <section>
+              <h2 data-aos="fade-up">The Values That Guide Our Code</h2>
+              <p data-aos="fade-left"><b>Here are the principles that define our work and our commitment to you:</b></p>
+              <div class="comitment">
+                <strong data-aos="fade-up" data-aos-delay="200">Precision Engineering</strong>
+                <p data-aos="fade-left" data-aos-delay="200">We deliver scalable, high-quality, and robust software solutions with a focus on durability and performance, backed by a proven 95%+ client satisfaction rate.</p>
+              </div>
+              <div class="comitment">
+                <strong data-aos="fade-up" data-aos-delay="400">Client-Centric Innovation</strong>
+                <p data-aos="fade-left" data-aos-delay="400">Every solution is custom-built and tailored precisely to meet your unique business needs and challenges. We measure our success by your efficiency.</p>
+              </div>
+              <div class="comitment">
+                <strong data-aos="fade-up" data-aos-delay="600">Trust & Reliability</strong>
+                <p data-aos="fade-left" data-aos-delay="600">We guarantee peace of mind with Secure cloud hosting and Dedicated 24/7 Support, ensuring a reliable and protected partnership from concept to deployment.</p>
+              </div>
+            </section>
+          </div>
+          <div class="call-to-action-area">
+            <h2>Ready To Start Your Transformation?</h2>
+            <p>Let's discuss how custom software, AI, and automation can<br> streamline your business and reclaim your team's time.</p>
+            <button id="consultation-form">Schedule a Free Consultation</button>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+    {% include "footer.html" %}
+
+    <div class="consultation-form-container">
+      <div class="consultation-form">
+        <form method="POST" action="{% url 'book_consultation' %}">
+          {% csrf_token %}
+          <div class="cunsultation-form-heading">
+            <h1>Book Cunsultation Now</h1>
+            <button>X</button>
+          </div>
+          <div class="personal-details">
+            <input type="text" name="name" placeholder="Full Name" required />
+
+            <input
+              type="email"
+              name="email"
+              id="business-email"
+              placeholder="Business Email"
+              required
+            />
+
+            <input
+              type="tel"
+              name="phone_number"
+              id="phone-number"
+              placeholder="Phone number"
+              required
+            />
+
+            <input
+              type="text"
+              name="company_name"
+              placeholder="Company Name (Optional)"
+            />
+
+            <input
+              type="url"
+              name="website_url"
+              id="website-url"
+              placeholder="Company Website (Optional)"
+            />
+          </div>
+          <div class="project-details-and-budget">
+            <div class="project-type">
+              <p><b>I'm interested in the following service(s)</b></p>
+              <input type="checkbox" name="web-devlopment" id="web-devlopment" hidden>
+              <label for="web-devlopment">Web Development (End-to-End)</label>
+
+              <input type="checkbox" name="python-scripts" id="python-scripts" hidden>
+              <label for="python-scripts">Python Scripts / Workflow Automation</label>
+
+              <input type="checkbox" name="ai-service" id="ai-service" hidden>
+              <label for="ai-service">AI Integration (Chatbots, Generative Media)</label>
+
+              <input type="checkbox" name="social-media-automation" id="social-media-automation" hidden>
+              <label for="social-media-automation">Social Media Automation (Facebook, WhatsApp)</label>
+
+              <input type="checkbox" name="tally-automation" id="tally-automation" hidden>
+              <label for="tally-automation">Tally Integration / Accounting Automation</label>
+
+              <input type="checkbox" name="undecided" id="undecided" hidden>
+              <label for="undecided">Other / Undecided</label>
+            </div>
+            <div class="project-budget-and-timeline">
+              <div class="project-budget-details">
+                <select name="budget" id="project-budget" required>
+                  <option value="" disabled selected hidden>
+                    What is your estimated project budget?
+                  </option>
+                  <option value="<10k">less than 10,000</option>
+                  <option value="25-50k">25,000 - 50,000</option>
+                  <option value="50-80k">50,000 - 80,000</option>
+                  <option value="80-130k">80,000 - 1,30,000</option>
+                  <option value="130k+">1,30,000+</option>
+                  <option value="deciding">
+                    I'm still deciding on a budget
+                  </option>
+                </select>
+              </div>
+              <div class="project-timeline">
+                <select name="timeline" id="project-timeline" required>
+                  <option value="" disabled selected hidden>
+                    When is your project timeline?
+                  </option>
+                  <option value="asap">ASAP (Urgent need)</option>
+                  <option value="1-3">1-3 months</option>
+                  <option value="3-6">3-6 months</option>
+                  <option value="6+">6+ Months / Long-term partner</option>
+                  <option value="exploring">Just exploring</option>
+                </select>
+              </div>
+            </div>
+            <div class="project-related-optional-detail">
+              <textarea
+                name="project_details"
+                placeholder="Other Project Details (Optional)"
+              ></textarea>
+            </div>
+          </div>
+          <div class="book-consultation-form-button">
+            <input type="submit" value="Book My Consultation">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.theboxcoders.com/about#aboutpage",
+      "url": "https://www.theboxcoders.com/about",
+      "name": "About The Box Coders",
+      "description": "Learn about The Box Coders — a software development and automation company in India focused on building custom software, AI-powered automation, and business efficiency tools.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.theboxcoders.com/#website"
+      },
+      "about": {
+        "@id": "https://www.theboxcoders.com/#business"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.theboxcoders.com/#business",
+      "name": "The Box Coders",
+      "url": "https://www.theboxcoders.com/",
+      "logo": "https://www.theboxcoders.com/static/assets/logo.svg",
+      "image": "https://www.theboxcoders.com/static/assets/og-card.jpg",
+      "description": "The Box Coders is a software development and automation company in India delivering custom software, Python automation, AI integrations, CRM systems, and business process automation solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "foundingLocation": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsAbout": [
+        "Software Development",
+        "Python Automation",
+        "AI Integration",
+        "Business Process Automation",
+        "CRM Development",
+        "Tally Automation",
+        "WhatsApp Automation",
+        "Facebook Automation"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/theboxcoders",
+        "https://twitter.com/theboxcoders"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.theboxcoders.com/#website",
+      "url": "https://www.theboxcoders.com/",
+      "name": "The Box Coders",
+      "publisher": {
+        "@id": "https://www.theboxcoders.com/#business"
+      }
+    }
+  ]
+}
+</script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          offset: 100,
+          duration: 1000,
+        },
+        {
+          offset: 100,
+          duration: 1000,
+        }
+      );
+    </script>
+    <script src="{% static 'scripts/about.js' %}"></script>
+  </body>
+</html>
